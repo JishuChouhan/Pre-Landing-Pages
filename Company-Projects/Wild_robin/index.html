@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WildRobin Email</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #1e0f06;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            animation: fadeInBody 1.5s ease-in-out;
+        }
+
+        h2 {
+            color: #f7b267;
+            font: 22px "Literata", serif;
+            animation: fadeInUp 1.2s ease-in-out;
+        }
+
+        p {
+            color: #e0b08e;
+            font: 14px "Jost", sans-serif;
+            line-height: 1.7;
+            animation: fadeInUp 1.4s ease-in-out;
+        }
+
+        a.cta-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 14px 28px;
+            background: linear-gradient(135deg, #ffce00, #ff9900);
+            color: #000;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(255, 152, 0, 0.4);
+            transition: all 0.3s ease-in-out;
+            animation: fadeInUp 6ms ease-in-out;
+        }
+
+        a.cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 16px rgba(255, 152, 0, 0.6);
+        }
+
+        .highlight-box {
+            padding-top: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            animation: fadeInUp 1.8s ease-in-out;
+        }
+
+        #play-now {
+            position: absolute;
+            top: 40%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 26px;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px #000;
+        }
+
+        .game-icons {
+            /* Set up a transparent 15px stroke for border-image */
+            --border-angle: 0deg;
+            border: 15px solid transparent;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 30px 15px;
+            margin: 20px;
+            position: relative;
+            z-index: 1;
+
+            /* Apply conic-gradient to the border only */
+            border-image: conic-gradient(from var(--border-angle),
+                    /* dark brown at TL → gold at TR → orange at BR → red at BL → back */
+                    #3a2515 0deg,
+                    #f7b267 90deg,
+                    #ff9900 180deg,
+                    #d9431e 270deg,
+                    #3a2515 360deg) 1;
+            /* slice == 1 to cover full border */
+            border-image-slice: 1;
+            /* ensure gradient spans entire stroke */
+
+            /* Animate only the gradient’s start angle */
+            animation: rotateBorder 6s linear infinite;
+        }
+
+        /* Animate the custom property so the gradient “chases” around */
+        @keyframes rotateBorder {
+            to {
+                --border-angle: 360deg;
+            }
+        }
+
+        /* Define the custom property for broader support */
+        @property --border-angle {
+            syntax: '<angle>';
+            initial-value: 0deg;
+            inherits: false;
+        }
+
+
+        .icon-row {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .icon-item {
+            cursor: pointer;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInBody {
+            from {
+                background-color: #000000;
+            }
+
+            to {
+                background-color: #1e0f06;
+            }
+        }
+
+        .animated-image {
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.04);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .cta-text {
+            display: inline-block;
+            /* allow transform */
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+                /* ease-out as it starts/ends */
+                animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+            }
+
+            50% {
+                transform: translateY(-10px);
+                /* ease-in as it falls back */
+                animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            table[class="main"] {
+                width: 100% !important;
+            }
+
+            img {
+                max-width: 100% !important;
+                height: auto !important;
+            }
+
+            .play-btn {
+                width: 50%;
+                height: auto;
+            }
+
+            #main-banner {
+                width: 30%;
+                height: auto;
+            }
+
+            #play-now {
+                font-size: large !important;
+                top: 50% !important;
+                left: 50% !important;
+                transform: translate(-50%, -50%) !important;
+            }
+
+            .cta-text {
+                text-align: center;
+                font-size: 20px;
+            }
+
+
+        }
+
+        @media only screen and (min-width: 300px) {
+            #play-now {
+                font-size: x-large !important;
+                top: 50% !important;
+                left: 50% !important;
+                transform: translate(-50%, -50%) !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#1e0f06">
+        <tr>
+            <td align="center">
+                <table class="main" width="600" cellpadding="0" cellspacing="0" border="0" bgcolor="#2d1c10">
+
+                    <!-- Logo -->
+                    <tr>
+                        <td align="center">
+                            <a href="#" target="_blank" rel="noopener noreferrer"><img src="assets/logo-mobile.jpg"
+                                    alt="WildRobin Logo" height="80" width="" class="animated-image"
+                                    id="main-banner"></a>
+                            <!-- Replace above with your logo -->
+                        </td>
+                    </tr>
+
+
+                    <!-- Intro -->
+                    <tr>
+                        <td align="center" style="padding: 30px; background-color: #3a2515;">
+                            <h2>WildRobin Online Casino & Sports Betting</h2>
+                            <p>Step into the world of thrilling games and unbeatable offers!</p>
+                        </td>
+                    </tr>
+
+                    <!-- Main Banner -->
+                    <tr>
+                        <td align="center">
+                            <a href="#" target="_blank" rel="noopener noreferrer"><img src="assets/mobile.jpg"
+                                    alt="Casino Promo" width="100%"
+                                    style="padding-top: 10px; max-width:560px; display:block; border-radius: 10px;"
+                                    class="animated-image"></a>
+                            <!-- Replace with animated promo banner -->
+                        </td>
+                    </tr>
+
+                    <!-- Offer -->
+                    <tr>
+                        <td align="center">
+                            <div class="highlight-box">
+                                <strong style="font-size: 20px;" class="cta-text">100% up to €500 + 200 Free
+                                    Spins</strong><br>
+                                <a href="#" target="_blank" class="cta-button">JOIN NOW</a>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Special Banner -->
+                    <tr>
+                        <td style="padding: 30px 0;">
+                            <a href="#" target="_blank" rel="noopener noreferrer"><img
+                                    src="assets/d9ea2618-0a4b-4702-bf54-8f145a71901b-specialbanner1860x492mobileimage.jpg"
+                                    alt="Special Banner"
+                                    style="border-radius: 12px; width:100%; max-width:560px; display:block; margin:auto;"
+                                    class="animated-image"></a>
+                            <!-- Replace 'your-animated-banner.gif' with your new image -->
+                        </td>
+                    </tr>
+
+                    <!-- Play Now Overlay -->
+                    <tr>
+                        <td align="center" style="padding: 20px;">
+                            <div style="position: relative; display: inline-block;">
+                                <a href="#" target="_blank" rel="noopener noreferrer"><img class="play-btn"
+                                        src="assets/secondary-click.jpg" alt="Play Now"
+                                        style="display: block; height: 100px; border-radius: 6px;"></a>
+                                <span class="cta-text" id="play-now"><a href="#" target="_blank">Play Now</a></span>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Online Casino Info -->
+                    <tr style="display: flex; flex-direction: column;">
+                        <td class="highlight-box">
+                            <h2>Online Casino Game Excellence</h2>
+                            <p>Thousands of exciting games await, from world-class providers. Try your luck with slots,
+                                table games, or live shows!</p>
+                            <p><strong>Top Picks:</strong> Slot games, Jackpots, Table Games, Instant Games, Live Shows.
+                            </p>
+                        </td>
+
+                        <td>
+                            <a href="#" target="_blank" rel="noopener noreferrer"><img class="animated-image"
+                                    style="padding: 10px; border-radius: 20px;" width="100%" src="assets/bird.JPG"
+                                    alt=""></a>
+                        </td>
+                    </tr>
+
+                    <!-- Live Casino -->
+                    <tr style="display: flex; flex-direction: column;">
+                        <td style="padding: 20px; background-color: #3c2313;">
+                            <h2>Live Casino</h2>
+                            <p>Interact with real dealers and experience the thrill of a real casino at your fingertips.
+                            </p>
+                            <p><strong>Games:</strong> Blackjack, Baccarat, Poker, Club Royale, Roulette & more.</p>
+                        </td>
+
+                        <td>
+                            <a href="#" target="_blank" rel="noopener noreferrer"><img class="animated-image"
+                                    style="padding: 10px; border-radius: 20px;" width="100%" src="assets/casino.jpg"
+                                    alt=""></a>
+                        </td>
+                    </tr>
+
+                    <!-- Sports Betting -->
+                    <tr style="display: flex; flex-direction: column;">
+                        <td class="highlight-box">
+                            <h2>Sports Betting</h2>
+                            <p>From esports to major leagues – we’ve got the odds, tools, and bonuses to keep your bets
+                                exciting and rewarding.</p>
+                            <p><strong>Sports:</strong> Football, Baseball, Basketball, VR Sports, Esports, Special
+                                Events.</p>
+                        </td>
+
+                        <td>
+                            <a href="#" target="_blank" rel="noopener noreferrer"><img class="animated-image"
+                                    style="padding: 10px; border-radius: 20px;" width="100%" src="assets/sports.jpg"
+                                    alt=""></a>
+                        </td>
+                    </tr>
+
+                    <!-- Final Message -->
+                    <tr>
+                        <td align="center"
+                            style="padding: 30px; background-color: #1e0f06; font-size: 15px; color: #dddddd;">
+                            <p>
+                                Join WildRobin and get rewarded for every spin, bet, and win. Let the games begin!
+                            </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="game-icons">
+                            <div class="icon-row">
+                                <div class="icon-item">
+                                    <a href="#" target="_blank"><img src="assets/joker.svg" alt="Joker"
+                                            style="width: 150px;"></a>
+
+                                    <p
+                                        style="margin-top: 10px; color: #FFD700; font-weight: bold;  text-align: center;">
+                                        MEGA SLOTS</p>
+                                </div>
+                                <div class="icon-item">
+                                    <a href="#" target="_blank" rel="noopener noreferrer"><img src="assets/zeus.svg"
+                                            alt="Zeus" style="width: 150px;"></a>
+
+                                    <p style="margin-top: 10px; color: #FFD700; font-weight: bold; text-align: center;">
+                                        LIVE CASINO</p>
+                                </div>
+                                <div class="icon-item">
+                                    <a href="#" target="_blank" rel="noopener noreferrer"><img src="assets/pyramid.svg"
+                                            alt="Pyramid" style="width: 150px;"></a>
+
+                                    <p style="margin-top: 10px; color: #FFD700; font-weight: bold; text-align: center;">
+                                        SPORTS BET</p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Footer Licensing -->
+                    <tr>
+                        <td align="center" style="padding: 20px;">
+                            <img src="assets/4bc83a26-3182-4e65-993e-7494d1be367d-footerlicencecolor.svg"
+                                alt="Licensing">
+                        </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td align="center" bgcolor="#111111" style="padding: 15px; font-size: 12px; color: #aaaaaa;">
+                            &copy; 2025 WildRobin. All rights reserved.<br>
+                            <a href="#" style="color: #aaaaaa; text-decoration: underline;">Unsubscribe</a>
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
