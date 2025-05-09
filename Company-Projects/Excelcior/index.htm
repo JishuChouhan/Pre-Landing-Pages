@@ -1,0 +1,2121 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/vnd.microsoft.icon" />
+
+  <link rel="stylesheet" href="assets/style.css">
+
+  <title>Susana Alexander: “Esto se terminó”</title>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Navigation hover logic
+      const navItems = document.querySelectorAll("#headerDesktop .second-nav ul:first-child > li");
+      let lastClass = "none";
+
+      const onNavEnter = (e) => {
+        const item = e.target;
+        const link = item.querySelector("a");
+        const text = link.innerText.toLowerCase();
+        const href = link.href;
+        const url = new URL(href);
+        const newClass = url.origin === window.location.origin ? url.pathname.replace("/", "") : text;
+        const parent = item.parentElement;
+
+        parent.classList.remove(lastClass);
+        parent.classList.add(newClass);
+        lastClass = newClass;
+      };
+
+      const onNavLeave = (e) => {
+        const parent = e.target.parentElement;
+        parent.classList.remove(lastClass);
+      };
+
+      navItems.forEach((item) => {
+        item.addEventListener("mouseenter", onNavEnter);
+        item.addEventListener("mouseleave", onNavLeave);
+      });
+
+      // Scroll behavior to toggle class on header
+      window.addEventListener("scroll", () => {
+        const changeMenu = document.getElementById("changeMenu");
+        const headerScroll = document.getElementById("headerScroll");
+
+        if (changeMenu && headerScroll) {
+          const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+          if (scrollTop > changeMenu.offsetTop) {
+            headerScroll.classList.add("scrolling");
+          } else {
+            headerScroll.classList.remove("scrolling");
+          }
+        }
+      });
+
+      // Menu tab toggle
+      
+    });
+
+  </script>
+
+</head>
+
+<body font-weight: normal;>
+
+  <div id="changeMenu"></div>
+  <div id="headerScroll">
+    <div class="header">
+      <div class="header-sticky container-md d-flex align-items-center">
+        <div class="menu-tab">
+          <span id="one"></span>
+          <span id="two"></span>
+          <span id="three"></span>
+        </div>
+        <div class="searcher d-flex align-items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-label="[Buscador]"
+            id="search-icon">
+            <title>Buscador</title>
+            <path id="Trazado_1329" data-name="Trazado 1329"
+              d="M-332.433,16.476l-5.2-5.2A10.2,10.2,0,0,0-335.61,5.2,10.206,10.206,0,0,0-345.805-5,10.206,10.206,0,0,0-356,5.2a10.206,10.206,0,0,0,10.195,10.194,10.2,10.2,0,0,0,6.084-2.02l5.2,5.2a1.468,1.468,0,0,0,1.046.433,1.468,1.468,0,0,0,1.046-.433A1.469,1.469,0,0,0-332,17.521,1.468,1.468,0,0,0-332.433,16.476Zm-13.372-4.044A7.246,7.246,0,0,1-353.043,5.2a7.246,7.246,0,0,1,7.238-7.238A7.246,7.246,0,0,1-338.568,5.2,7.246,7.246,0,0,1-345.805,12.432Z"
+              transform="translate(356 5)" fill="#b71717" />
+          </svg>
+          <form id="search-form" class="d-flex align-items-center" action="/buscador" method="GET">
+            <input type="text" name="b" autocomplete="off" placeholder="Buscar en Excélsior">
+            <input type="submit" value="Buscar" />
+          </form>
+        </div>
+        <div class="logo-scroll d-flex">
+          <a href="#" target="_blank" class="logo d-flex" style="width: 200px; height: 42px;"
+            aria-label="Acceso a página de Inicio">
+            <svg aria-label="[Excélsior Logo]" version=1.1 viewBox="0 0 162 21.3" xmlns=http://www.w3.org/2000/svg
+              xmlns:xlink=http://www.w3.org/1999/xlink>
+              <defs>
+
+                <clipPath id=clippath>
+                  <rect class=cls-1 height=24.8 width=150.5 x=-.4 y=.7 />
+                </clipPath>
+                <clipPath id=clippath-1>
+                  <rect class=cls-1 height=24.8 width=150.5 x=-.4 y=.7 />
+                </clipPath>
+                <clipPath id=clippath-2>
+                  <rect class=cls-1 height=24.8 width=150.5 x=-.4 y=.7 />
+                </clipPath>
+                <linearGradient id=linear-gradient x1=152.6 x2=159.3 y1=3.8 y2=3.8 gradientUnits=userSpaceOnUse>
+                  <stop offset=0 stop-color=#000 />
+                  <stop offset=.1 stop-color=#2c2c2c />
+                  <stop offset=.2 stop-color=#464646 />
+                  <stop offset=.3 stop-color=#2e2e2e />
+                  <stop offset=.4 stop-color=#202020 />
+                  <stop offset=.4 stop-color=#1b1b1b />
+                  <stop offset=.7 stop-color=#464646 />
+                  <stop offset=.8 stop-color=#252525 />
+                  <stop offset=.9 stop-color=#0a0a0a />
+                  <stop offset=1 stop-color=#000 />
+                </linearGradient>
+                <linearGradient id=linear-gradient-2 x1=152.6 x2=159.3 y1=2.7 y2=2.7 gradientUnits=userSpaceOnUse>
+                  <stop offset=0 stop-color=#343434 />
+                  <stop offset=1 stop-color=#9c9c9c />
+                </linearGradient>
+                <linearGradient id=linear-gradient-3 x1=148.6 x2=164.9 y1=15.5 y2=4.6 gradientUnits=userSpaceOnUse>
+                  <stop offset=0 stop-color=#464646 />
+                  <stop offset=.2 stop-color=#000 />
+                  <stop offset=.3 stop-color=#464646 />
+                  <stop offset=.3 stop-color=#3d3d3d />
+                  <stop offset=.3 stop-color=#262626 />
+                  <stop offset=.4 stop-color=#151515 />
+                  <stop offset=.4 stop-color=#090909 />
+                  <stop offset=.4 stop-color=#010101 />
+                  <stop offset=.5 stop-color=#000 />
+                  <stop offset=.5 stop-color=#0a0a0a />
+                  <stop offset=.5 stop-color=#242424 />
+                  <stop offset=.6 stop-color=#373737 />
+                  <stop offset=.6 stop-color=#424242 />
+                  <stop offset=.6 stop-color=#464646 />
+                  <stop offset=.6 stop-color=#363636 />
+                  <stop offset=.7 stop-color=#272727 />
+                  <stop offset=.7 stop-color=#1d1d1d />
+                  <stop offset=.7 stop-color=#1b1b1b />
+                  <stop offset=.7 stop-color=#1f1f1f />
+                  <stop offset=.8 stop-color=#343434 />
+                  <stop offset=.8 stop-color=#414141 />
+                  <stop offset=.8 stop-color=#464646 />
+                  <stop offset=.8 stop-color=#393939 />
+                  <stop offset=.9 stop-color=#202020 />
+                  <stop offset=.9 stop-color=#0e0e0e />
+                  <stop offset=.9 stop-color=#030303 />
+                  <stop offset=1 stop-color=#000 />
+                </linearGradient>
+                <linearGradient id=linear-gradient-4 x1=150.2 x2=159 y1=11.1 y2=11.1 xlink:href=#linear-gradient-2 />
+                <linearGradient id=linear-gradient-5 x1=150.1 x2=164.1 y1=5.3 y2=17.6 gradientUnits=userSpaceOnUse>
+                  <stop offset=0 stop-color=#000 />
+                  <stop offset=.1 stop-color=#464646 />
+                  <stop offset=.1 stop-color=#454545 />
+                  <stop offset=.2 stop-color=#272727 />
+                  <stop offset=.2 stop-color=#111 />
+                  <stop offset=.3 stop-color=#040404 />
+                  <stop offset=.3 stop-color=#000 />
+                  <stop offset=.4 stop-color=#464646 />
+                  <stop offset=.5 stop-color=#333 />
+                  <stop offset=.6 stop-color=#1b1b1b />
+                  <stop offset=.6 stop-color=#131313 />
+                  <stop offset=.7 stop-color=#2a2a2a />
+                  <stop offset=.7 stop-color=#464646 />
+                  <stop offset=1 stop-color=#000 />
+                </linearGradient>
+                <linearGradient id=linear-gradient-6 x1=153 x2=161.8 y1=11.1 y2=11.1 gradientUnits=userSpaceOnUse>
+                  <stop offset=0 stop-color=#9c9c9c />
+                  <stop offset=1 stop-color=#343434 />
+                </linearGradient>
+              </defs>
+              <g>
+                <g id=Capa_1>
+                  <g>
+                    <g class=cls-12>
+                      <path class=cls-9
+                        d=M27.6,10.3l6.2-9.2h-5.9l-3.7,5.9-3.7-5.9h-5.8l6.2,9.3-6.7,9.8h5.9l4.2-6.4,4.2,6.4h5.8l-6.7-9.9ZM38.8,10.6c0-3.1,2.2-5.5,5.2-5.5s3.6,1.3,4.2,2.8l4.2-2c-1.3-2.5-3.7-5.1-8.5-5.1s-10.1,4-10.1,9.9,4.5,9.9,10.1,9.9,7.2-2.7,8.5-5.1l-4.2-2c-.7,1.5-2.2,2.8-4.2,2.8-3-.2-5.2-2.6-5.2-5.7M71.3,20h12.5v-4.3h-7.6V1h-4.9v19ZM90.6,6.4c0-.8.7-1.5,2.2-1.5s3.8.7,5.4,2l2.7-3.5c-2-1.8-4.6-2.7-7.7-2.7-4.8,0-7.6,2.8-7.6,5.9,0,4.6,4.4,5.3,7.5,5.9,2,.5,3.3.8,3.3,2s-1,1.6-2.7,1.6c-2.6,0-4.7-1.1-6-2.5l-2.6,3.7c2,1.9,4.6,3.1,8.5,3.1s7.9-2.5,7.9-6.3-4.4-5.2-7.4-5.9c-2.1-.4-3.3-.7-3.3-1.8M103.7,20h4.9V1h-4.9v19ZM126.4,10.6c0,3.1-2,5.5-5.2,5.5s-5.2-2.4-5.2-5.5,2-5.5,5.2-5.5c3.2,0,5.2,2.3,5.2,5.5M131.4,10.6c0-5.8-4.4-9.9-10.1-9.9s-10.2,4.1-10.2,9.9,4.4,9.9,10.2,9.9,10.1-4.1,10.1-9.9M145,7.3c0,1.3-1.1,2.1-2.3,2.1h-3.9v-4.3h3.9c1.3,0,2.3.8,2.3,2.1M150,7.4c0-3.5-2.4-6.3-6.6-6.3h-9.6v19h4.9v-6.4h2.5l3.2,6.4h5.6l-3.9-7c1.9-.7,3.9-2.5,3.9-5.8 />
+                    </g>
+                    <g class=cls-10>
+                      <path class=cls-9
+                        d=M-.4,20h13.9v-4.2H4.5v-4.5c.2,0,.6,0,.7,0,.7,0,1.4.2,1.8.5.5.3,1,.4,1.9.4,1.4,0,2-.8,2.6-2.4h0c0,0-.4-.4-.4-.4h0c-.2.2-.5.5-1.2.5s-.9-.2-1.3-.4c-.4-.2-.9-.5-1.9-.5s-1.6,0-2.1.5v-4.3h9V1H-.4v19Z />
+                    </g>
+                    <g class=cls-11>
+                      <path class=cls-9
+                        d=M54.6,20h13.9v-4.2h-9v-4.5c.2,0,.6,0,.7,0,.7,0,1.4.2,1.8.5.5.3,1,.4,1.9.4,1.4,0,2-.8,2.6-2.4h0c0,0-.4-.4-.4-.4h0c-.2.2-.5.5-1.2.5s-.9-.2-1.3-.4c-.5-.3-1-.5-2-.5s-1.7,0-2.2.5v-4.3h9V1h-13.9v19h.2Z />
+                    </g>
+                  </g>
+                  <g>
+                    <path class=cls-7-
+                      d=M159.3,4.4c0-1.4-.3-2.2-.6-2.5-.5-.6-1.7-1-2.8-1s-2.2.4-2.8,1c-.3.3-.5,1.1-.6,2.5,0,1.4.9,2.4.9,2.4,0,0-.4-2.9,2.4-2.9s2.4,2.9,2.4,2.9c0,0,1-1,.9-2.4Z />
+                    <g>
+                      <path class=cls-6-
+                        d=M152.6,4.5c0-1.4.3-2.2.6-2.5.5-.6,1.7-1,2.8-1s2.2.4,2.8,1c.3.3.5,1.1.6,2.5,0,0,0,0,0,.1,0,0,0-.1,0-.2,0-1.4-.3-2.2-.6-2.5-.5-.6-1.7-1-2.8-1s-2.2.4-2.8,1c-.3.3-.5,1.1-.6,2.5,0,0,0,.1,0,.2,0,0,0,0,0-.1Z />
+                      <path class=cls-8- d=M158.4,6.5c0,.2,0,.3,0,.3,0,0,0,0,0,0,0,0,0-.2,0-.3Z />
+                      <path class=cls-8- d=M153.5,6.8s0,0,0,0c0,0,0-.1,0-.3,0,.1,0,.3,0,.3Z />
+                    </g>
+                    <path class=cls-5-
+                      d=M156.4,7.7c-2.5,3.9-4.8,6.9-6.3,8.6l1.5,4c.3-.5,6.6-9.3,7.8-11.8,1-2.3.5-5.2-.7-6.6.2.4.8.8-2.3,5.8Z />
+                    <path class=cls-4-
+                      d=M150.2,16.3c1.5-1.7,3.8-4.7,6.3-8.6,2.8-4.4,2.6-5.3,2.4-5.7,0,0,0,0-.1-.1.2.4.8.8-2.3,5.8-2.5,3.9-4.8,6.9-6.3,8.6l1.5,4s0,0,0,0l-1.5-4Z />
+                    <path class=cls-2-
+                      d=M161.8,16.3c-1.5-1.7-3.8-4.7-6.3-8.6-3.1-5-2.5-5.4-2.3-5.8-1.2,1.4-1.8,4.3-.7,6.6,1.2,2.5,7.5,11.4,7.8,11.8l1.5-4Z />
+                    <path class=cls-3-
+                      d=M155.5,7.7c-3.1-5-2.5-5.4-2.3-5.8,0,0,0,0,0,0-.2.4-.8.8,2.3,5.8,2.5,3.9,4.8,6.9,6.3,8.6l-1.5,4s0,0,0,0l1.5-4c-1.5-1.7-3.8-4.7-6.3-8.6Z />
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </a>
+          <div class="canales-custom">
+            <div class="container-md">
+              <div id="block-menu-menu-menu-top" class="block block-menu">
+
+
+                <div class="content">
+                  <ul class="menu">
+                    <li class="first leaf"><a href="#" title="Página principal de Excélsior" target="_blank">Portada</a>
+                    </li>
+                    <li class="leaf"><a href="#" title="Acceso al impreso del periódico y al histórico"
+                        target="_blank">Impreso</a></li>
+                    <li class="leaf"><a href="#" title="Imagen Multicast TV" target="_blank">Tv</a></li>
+                    <li class="leaf"><a href="#" title="Imagen Radio" target="_blank">Radio</a></li>
+                    <li class="leaf"><a href="/imagentv" title="Imagen Tv en Vivo" target="_blank">Imagen Tv</a></li>
+                    <li class="last leaf"><a href="#" title="Última hora de noticias" target="_blank">Última hora</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="side-right d-flex align-items-center">
+          <span class="top-social-header align-items-center">
+            <span class="title-section">
+
+            </span>
+            <span class="social-list d-flex">
+              <a class="d-flex" href="#" target="_blank" aria-label="Facebook Excélsior"
+                style="width:25px; height: 25px;">
+
+                <svg id="facebook-logo-in-circular-button-outlined-social-symbol" xmlns="http://www.w3.org/2000/svg"
+                  width="24" height="24" viewBox="0 0 24 24">
+                  <g id="Grupo_4613" data-name="Grupo 4613">
+                    <path id="Trazado_787" data-name="Trazado 787" d="M24,12A12,12,0,1,0,12,24,12,12,0,0,0,24,12Z"
+                      fill="#385194" />
+                    <path id="Trazado_788" data-name="Trazado 788"
+                      d="M227.241,144.426v-7.295h2.12l.335-2.417h-2.455V133.5c0-.631.182-1.233.98-1.233h1.594v-2.413h-2.263c-1.9,0-2.421,1.422-2.421,3.394v1.463h-1.305v2.419h1.305v7.295Z"
+                      transform="translate(-214.813 -125.133)" fill="#fff" />
+                  </g>
+                </svg>
+              </a>
+              <a class="d-flex" href="#" target="_blank" aria-label="Twitter Excélsior"
+                style="width:25px; height: 25px;">
+
+                <svg version="1.1" id="twitter-circular-button" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
+                  style="enable-background:new 0 0 24 24;" xml:space="preserve">
+
+                  <g>
+                    <circle cx="12" cy="12" r="12" />
+                    <g id="layer1" transform="translate(52.390088,-25.058597)">
+                      <path id="path1009" class="st0t" d="M-47.8,30.1l5.7,7.7l-5.8,6.2h1.3l5.1-5.5l4.1,5.5h4.4l-6.1-8.1l5.4-5.8h-1.3l-4.7,5l-3.8-5
+                          H-47.8z M-45.9,31.1h2l9,12h-2L-45.9,31.1z" />
+                    </g>
+                  </g>
+                </svg>
+
+              </a>
+              <a class="d-flex" aria-label="Instagram Excélsior" target="_blank" href="#"
+                style="width:25px; height: 25px;">
+
+                <svg id="pinterest-social-visual-website-logotype" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                  <defs>
+                    <linearGradient id="linear-gradient" x1="0.5" y1="0.008" x2="0.5" y2="0.998"
+                      gradientUnits="objectBoundingBox">
+                      <stop offset="0" stop-color="#ffba5b" />
+                      <stop offset="0.3" stop-color="#c74c4d" />
+                      <stop offset="0.6" stop-color="#c21975" />
+                      <stop offset="1" stop-color="#7024c4" />
+                    </linearGradient>
+                  </defs>
+                  <g id="Grupo_4615" data-name="Grupo 4615">
+                    <path id="Trazado_792" data-name="Trazado 792" d="M24,12A12,12,0,1,0,12,24,12,12,0,0,0,24,12Z"
+                      fill="url(#linear-gradient)" />
+                    <g id="instagram_1_" data-name="instagram (1)" transform="translate(5.241 5.241)">
+                      <g id="Grupo_4617" data-name="Grupo 4617">
+                        <g id="Grupo_4616" data-name="Grupo 4616">
+                          <path id="Trazado_793" data-name="Trazado 793"
+                            d="M9.2,0H4.183A4.183,4.183,0,0,0,0,4.183V9.2a4.183,4.183,0,0,0,4.183,4.183H9.2A4.183,4.183,0,0,0,13.385,9.2V4.183A4.183,4.183,0,0,0,9.2,0ZM12.13,9.2A2.931,2.931,0,0,1,9.2,12.13H4.183A2.931,2.931,0,0,1,1.255,9.2V4.183A2.931,2.931,0,0,1,4.183,1.255H9.2A2.931,2.931,0,0,1,12.13,4.183Z"
+                            fill="#fff" />
+                        </g>
+                      </g>
+                      <g id="Grupo_4619" data-name="Grupo 4619" transform="translate(3.346 3.346)">
+                        <g id="Grupo_4618" data-name="Grupo 4618">
+                          <path id="Trazado_794" data-name="Trazado 794"
+                            d="M131.346,128a3.346,3.346,0,1,0,3.346,3.346A3.346,3.346,0,0,0,131.346,128Zm0,5.438a2.091,2.091,0,1,1,2.091-2.091A2.094,2.094,0,0,1,131.346,133.438Z"
+                            transform="translate(-128 -128)" fill="#fff" />
+                        </g>
+                      </g>
+                      <g id="Grupo_4621" data-name="Grupo 4621" transform="translate(9.844 2.649)">
+                        <g id="Grupo_4620" data-name="Grupo 4620">
+                          <ellipse id="Elipse_35" data-name="Elipse 35" cx="0.446" cy="0.446" rx="0.446" ry="0.446"
+                            fill="#fff" />
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+
+              </a>
+              <a class="d-flex" aria-label="YouTube Excélsior" target="_blank" href="#"
+                style="width:25px; height: 25px;">
+
+                <svg id="pinterest-social-visual-website-logotype" xmlns="http://www.w3.org/2000/svg" width="24"
+                  height="24" viewBox="0 0 24 24">
+                  <g id="Grupo_4615" data-name="Grupo 4615">
+                    <path id="Trazado_792" data-name="Trazado 792" d="M24,12A12,12,0,1,0,12,24,12,12,0,0,0,24,12Z"
+                      fill="#d40c16" />
+                    <g id="youtube" transform="translate(5.673 7.493)">
+                      <g id="Grupo_4622" data-name="Grupo 4622">
+                        <path id="Trazado_795" data-name="Trazado 795"
+                          d="M12.5,80.865c-.354-.63-.738-.746-1.52-.79S8.23,80,6.527,80s-3.672.022-4.452.074-1.166.16-1.523.79A7.7,7.7,0,0,0,0,84.484v.007A7.67,7.67,0,0,0,.552,88.1c.357.63.741.744,1.522.8s2.747.073,4.453.073,3.667-.027,4.45-.072,1.166-.167,1.52-.8a7.622,7.622,0,0,0,.554-3.613v-.007A7.638,7.638,0,0,0,12.5,80.865Zm-7.6,6.069V82.039l4.079,2.447Z"
+                          transform="translate(0 -80)" fill="#fff" />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+
+              </a>
+              <a class="d-flex" aria-label="Flipboard Excélsior" target="_blank" href="#"
+                style="width:25px; height: 25px;">
+
+                <svg id="pinterest-social-visual-website-logotype" xmlns="http://www.w3.org/2000/svg" width="24"
+                  height="24" viewBox="0 0 24 24">
+                  <g id="Grupo_4615" data-name="Grupo 4615">
+                    <path id="Trazado_792" data-name="Trazado 792" d="M24,12A12,12,0,1,0,12,24,12,12,0,0,0,24,12Z"
+                      fill="#d40c16" />
+                    <path id="Trazado_796" data-name="Trazado 796"
+                      d="M7.545,17.049v-9.3L16.969,7.7v3.04H13.853v3.192H10.509v3.116Z"
+                      transform="translate(-0.034 -0.053)" fill="#fff" />
+                  </g>
+                </svg>
+              </a>
+            </span>
+          </span>
+          <span class="links-right d-none d-lg-block">
+            <a href="#" target="_blank" aria-label="Anunciate">Anúnciate</a> | <a href="#" target="_blank"
+              aria-label="Suscríbete">Suscríbete</a>
+          </span>
+          <div id="img_user" class="btn-group logout d-flex btn_user">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" fill="#b71717" class="bi bi-chevron-up"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" fill="#b71717" class="bi bi-chevron-down"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+            </svg>
+            <button type="button" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"
+              aria-label="Acceso a Login de usuario">
+              <div class="user-pic">
+                <img class="img-fluid" id="image_user_pic"
+                  src="assets/def-usr-pic.png"
+                  alt="Icono de usuario para hacer login" title="Icono de usuario para hacer login" />
+              </div>
+              <svg id="perfil-del-usuario" xmlns="http://www.w3.org/2000/svg" width="21" viewBox="0 0 21 24">
+                <g transform="translate(-1.559)">
+                  <path id="Trazado_26210" data-name="Trazado 26210"
+                    d="M22.559,21.96H20.032a7.892,7.892,0,0,0-7.974-7.793A7.892,7.892,0,0,0,4.086,21.96H1.559a10.432,10.432,0,0,1,10.5-10.34A10.432,10.432,0,0,1,22.559,21.96Z"
+                    transform="translate(0 2.04)" fill="#b71717" />
+                  <path id="Trazado_26211" data-name="Trazado 26211"
+                    d="M11.325,13.973a6.986,6.986,0,1,1,6.941-6.986A6.973,6.973,0,0,1,11.325,13.973Zm0-11.425a4.439,4.439,0,1,0,4.411,4.439A4.429,4.429,0,0,0,11.325,2.547Z"
+                    transform="translate(0.735)" fill="#b71717" />
+                </g>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-fixed-menu menu-hide">
+      <div class="fixed-menu-opened">
+        <div id="first-row-menu-sticky" class="d-flex justify-content-between">
+          <div class="left-add add-lateral d-flex justify-content-center">
+
+          </div>
+          <div class="menu-fixed-desktop">
+            <div class="container-md">
+              <div class="lists accordion row justify-content-between">
+                <div class="list accordion-item">
+                  <button id="accordion-button-1" aria-expanded="false">
+                    <b>Secciones</b>
+                    <span class="icon d-lg-none" aria-hidden="true">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="currentColor" class="bi bi-chevron-down"
+                        viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="accordion-content">
+                    <ul class="list-unstyled">
+                      <li>
+                        <a href="#" target="_blank" aria-label="Acceso a la lista de noticias de Nacional">Nacional</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" aria-label="Acceso a la lista de noticias de Global">Global</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank"
+                          aria-label="Acceso a la lista de noticias de Dinero en imagen">Dinero</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank"
+                          aria-label="Acceso a la lista de noticias de Comunidad">Comunidad</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" aria-label="Acceso a la lista de noticias de Depoertes">Deportes</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank"
+                          aria-label="Acceso a la lista de noticias de Espectáculos">Espectáculos</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" aria-label="Acceso a la lista de noticias de Hacker">Hacker</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" aria-label="Acceso a la lista de noticias de Hacker">Elecciones
+                          <script>document.write(new Date().getFullYear())</script>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank"
+                          aria-label="Acceso a la lista de noticias de Expresiones">Expresiones</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank"
+                          aria-label="Acceso a la lista de noticias de Columnistas">Opinión</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" aria-label="Acceso a la lista de noticias de Trending">Trending</a>
+                      </li>
+                      <li>
+                        <a href="#" aria-label="Acceso a Gentleman" rel="nofollow" target="_blank">Gentleman</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="list accordion-item">
+                  <button id="accordion-button-2" aria-expanded="false">
+                    <b>Especiales</b>
+                    <span class="icon d-lg-none" aria-hidden="true">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="currentColor" class="bi bi-chevron-down"
+                        viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="accordion-content">
+                    <ul class="list-unstyled">
+                      <li>
+                        <a href="#" target="_blank" aria-label="Acceso a contenido de Foro Excélsior">Foro Excélsior</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" aria-label="Acceso a Crisis Ambiental">Crisis Ambiental</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" aria-label="Acceso a Franja de Gaza">Franja de Gaza</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" aria-label="Acceso a Metro CDMX">Metro
+                          CDMX</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" aria-label="Acceso a El Chapo">El Chapo</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="list accordion-item">
+                  <button id="accordion-button-4" aria-expanded="false">
+                    <b>Más Excélsior</b>
+                    <span class="icon d-lg-none" aria-hidden="true">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="currentColor" class="bi bi-chevron-down"
+                        viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="accordion-content">
+                    <ul class="list-unstyled">
+                      <li>
+                        <a href="#" target="_blank" aria-label="Acceso a Blogs">Blogs</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" aria-label="Acceso a Lo más Leido">Lo más leído</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" aria-label="Acceso a Última hora">Última hora</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="list accordion-item">
+
+                </div><!-- -->
+                <div class="list accordion-item">
+                  <button id="accordion-button-6" aria-expanded="false">
+                    <b>Temas de interés</b>
+                    <span class="icon d-lg-none" aria-hidden="true">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="currentColor" class="bi bi-chevron-down"
+                        viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="accordion-content">
+                    <ul class="list-unstyled">
+                      <li>
+                        <a href="#" target="_blank" aria-label="Acceso a noticias de Redes sociales">Redes sociales</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" aria-label="Acceso a noticias de Alcaldías">Alcaldías</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" aria-label="Acceso a noticias de Cocina">Cocina</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" aria-label="Acceso a noticias de Salud">Salud</a>
+                      </li>
+                      <li>
+                        <a href="#" aria-label="Acceso a Gentleman" target="_blank">Gentleman</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" aria-label="Acceso a noticias de Viajes">Viajes</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" aria-label="Acceso a noticias de Utilidad">De Utilidad</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" aria-label="Acceso a noticias de Apps">Apps</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="list accordion-item">
+                  <button id="accordion-button-8" aria-expanded="false">
+                    <b>Servicios</b>
+                    <span class="icon d-lg-none" aria-hidden="true">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="currentColor" class="bi bi-chevron-down"
+                        viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="accordion-content">
+                    <ul class="list-unstyled">
+                      <li>
+                        <a target="_blank" href="#" rel="nofollow">Boletín</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" aria-label="Acceso a página de Anúnciate">Anúnciate</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" aria-label="Acceso a página de Directorio">Directorio</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank" aria-label="Acceso a página de Suscripciones">Suscripciones</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-add add-lateral d-flex justify-content-center">
+
+          </div>
+        </div>
+        <div class="container-md">
+          <hr class="marg-neg-lateral" />
+          <div class="apps-section">
+            <div class="title-section text-center">Descarga nuestra app</div>
+            <div class="d-flex align-items-center justify-content-center">
+              <a target="_blank" href="#" rel="nofollow" style="width: 228px; height: 67px;">
+
+                <svg id=Capa_1 style="enable-background:new 0 0 2500 741" version=1.1 viewBox="0 0 2500 741" x=0px
+                  xml:space=preserve xmlns=http://www.w3.org/2000/svg xmlns:xlink=http://www.w3.org/1999/xlink y=0px>
+
+                  <path d="M2483.4,653.5c0,39.2-31.8,71-71,71H87.6c-39.3,0-71.1-31.8-71.1-71V87.6c0-39.2,31.9-71.1,71.1-71.1h2324.7
+                  c39.3,0,71,31.9,71,71.1L2483.4,653.5z" class=st0app />
+                  <path d="M2412.4,741H87.6C39.3,741,0,701.7,0,653.5V87.6C0,39.3,39.3,0,87.6,0h2324.7c48.2,0,87.6,39.3,87.6,87.6v565.9
+                  C2500,701.7,2460.6,741,2412.4,741L2412.4,741z" class=st1app />
+                  <path d="M2483.4,653.5c0,39.2-31.8,71-71,71H87.6c-39.3,0-71.1-31.8-71.1-71V87.6c0-39.2,31.9-71.1,71.1-71.1h2324.7
+                  c39.3,0,71,31.9,71,71.1L2483.4,653.5z" />
+                  <path d="M558.2,366.6c-0.5-59.7,48.9-88.8,51.2-90.1c-28-40.8-71.4-46.4-86.6-46.8c-36.4-3.8-71.8,21.8-90.4,21.8
+                  c-18.9,0-47.5-21.4-78.3-20.8c-39.7,0.6-76.7,23.6-97.1,59.2c-42,72.7-10.7,179.5,29.6,238.3c20.1,28.8,43.6,60.9,74.4,59.8
+                  c30.1-1.2,41.4-19.2,77.7-19.2c36,0,46.6,19.2,77.9,18.5c32.3-0.5,52.7-28.9,72.1-57.9c23.3-33,32.6-65.5,33-67.1
+                  C620.9,461.8,558.9,438.2,558.2,366.6L558.2,366.6z M498.9,191c16.2-20.3,27.3-47.8,24.2-75.8c-23.4,1-52.8,16.2-69.6,36
+                  c-14.9,17.5-28.3,46.1-24.8,73C455,226.2,482,210.9,498.9,191L498.9,191z" class=st0app />
+                  <linearGradient gradientTransform="matrix(18.5285 0 0 -18.5285 -3781.6504 -15853.4697)"
+                    gradientUnits=userSpaceOnUse id=SVGID_1_ x1=303.0589 x2=303.0589 y1=-895.7242 y2=-859.6782>
+                    <stop offset=0 style=stop-color:#1a1a1a;stop-opacity:.1 />
+                    <stop offset=0.123 style=stop-color:#212121;stop-opacity:.151 />
+                    <stop offset=0.308 style=stop-color:#353535;stop-opacity:.227 />
+                    <stop offset=0.532 style=stop-color:#575757;stop-opacity:.318 />
+                    <stop offset=0.783 style=stop-color:#858585;stop-opacity:.421 />
+                    <stop offset=1 style=stop-color:#b3b3b3;stop-opacity:.51 />
+                  </linearGradient>
+                  <path d=M2412.4,0H1167.2L1654.9,741h757.5c48.2,0,87.6-39.2,87.6-87.5V87.6C2500,39.3,2460.6,0,2412.4,0z
+                    class=st2app />
+                  <g>
+                    <path
+                      d="M994.3,583.8h-42.1l-23-72.4h-80.1l-22,72.4h-41l79.4-246.6h49L994.3,583.8L994.3,583.8z M922.3,480.9
+                    l-20.8-64.4c-2.2-6.6-6.4-22.1-12.4-46.5h-0.7c-2.4,10.5-6.4,26-11.7,46.5L856,480.9H922.3L922.3,480.9z M1198.1,492.7
+                    c0,30.2-8.2,54.1-24.6,71.7c-14.7,15.6-33,23.4-54.8,23.4c-23.5,0-40.5-8.4-50.8-25.2v93.3h-39.5V464.4c0-19-0.5-38.5-1.5-58.4
+                    h34.7l2.2,28.2h0.7c13.2-21.2,33.2-31.9,60-31.9c21,0,38.5,8.3,52.5,24.9C1191.1,443.8,1198.1,465.6,1198.1,492.7L1198.1,492.7z
+                     M1157.9,494.1c0-17.3-3.9-31.6-11.7-42.8c-8.5-11.7-20-17.5-34.4-17.5c-9.7,0-18.6,3.3-26.5,9.7c-7.9,6.5-13.1,15-15.5,25.4
+                    c-1.2,4.9-1.8,8.9-1.8,12v29.7c0,12.9,4,23.8,11.9,32.8c7.9,8.9,18.2,13.4,30.9,13.4c14.9,0,26.5-5.8,34.7-17.2
+                    C1153.7,528,1157.9,512.9,1157.9,494.1L1157.9,494.1z M1402.6,492.7c0,30.2-8.2,54.1-24.6,71.7c-14.7,15.6-33,23.4-54.8,23.4
+                    c-23.5,0-40.5-8.4-50.8-25.2v93.3h-39.5V464.4c0-19-0.5-38.5-1.5-58.4h34.7l2.2,28.2h0.7c13.2-21.2,33.1-31.9,60-31.9
+                    c21,0,38.5,8.3,52.5,24.9C1395.6,443.8,1402.6,465.6,1402.6,492.7L1402.6,492.7z M1362.3,494.1c0-17.3-3.9-31.6-11.7-42.8
+                    c-8.5-11.7-20-17.5-34.4-17.5c-9.7,0-18.6,3.3-26.6,9.7c-7.9,6.5-13.1,15-15.5,25.4c-1.2,4.9-1.9,8.9-1.9,12v29.7
+                    c0,12.9,4,23.8,11.9,32.8c7.9,8.9,18.2,13.4,30.9,13.4c14.9,0,26.5-5.8,34.7-17.2C1358.2,528,1362.3,512.9,1362.3,494.1
+                    L1362.3,494.1z M1631.3,514.6c0,21-7.3,38.1-21.9,51.2c-16,14.4-38.4,21.6-67.2,21.6c-26.5,0-47.8-5.1-63.8-15.4l9.1-32.9
+                    c17.3,10.3,36.4,15.4,57.1,15.4c14.9,0,26.5-3.4,34.7-10.1c8.3-6.7,12.5-15.7,12.5-26.9c0-10-3.5-18.4-10.3-25.3
+                    c-6.8-6.8-18.1-13.2-34-19c-43.2-16.1-64.8-39.7-64.8-70.6c0-20.2,7.6-36.8,22.9-49.7c15.2-12.9,35.4-19.4,60.6-19.4
+                    c22.4,0,41.1,3.9,56,11.7l-9.9,32.2c-14-7.6-29.7-11.3-47.4-11.3c-13.9,0-24.9,3.4-32.7,10.2c-6.6,6.1-9.9,13.5-9.9,22.3
+                    c0,9.7,3.8,17.8,11.4,24.1c6.6,5.8,18.5,12.2,35.8,19c21.2,8.6,36.8,18.5,46.8,30C1626.2,483.3,1631.3,497.6,1631.3,514.6
+                    L1631.3,514.6z M1762.2,435.6h-43.5v86.3c0,22,7.7,32.9,23.1,32.9c7.1,0,12.9-0.6,17.5-1.8l1.1,30c-7.8,2.9-18,4.4-30.7,4.4
+                    c-15.6,0-27.8-4.8-36.6-14.3c-8.8-9.5-13.2-25.5-13.2-47.9v-89.6h-25.9v-29.6h25.9v-32.6l38.8-11.7v44.3h43.5V435.6L1762.2,435.6z
+                     M1958.3,493.4c0,27.3-7.8,49.8-23.4,67.3c-16.3,18.1-38,27.1-65.1,27.1c-26.1,0-46.9-8.7-62.4-25.9
+                    c-15.5-17.3-23.2-39.2-23.2-65.5c0-27.6,8-50.1,24-67.7c16-17.6,37.5-26.3,64.6-26.3c26.1,0,47,8.7,62.9,26
+                    C1950.7,445.1,1958.3,466.8,1958.3,493.4L1958.3,493.4z M1917.3,494.3c0-16.3-3.5-30.3-10.6-42c-8.3-14.1-20.1-21.2-35.5-21.2
+                    c-15.8,0-28,7.1-36.2,21.2c-7.1,11.7-10.6,25.9-10.6,42.7c0,16.3,3.5,30.3,10.6,42c8.5,14.1,20.5,21.2,35.9,21.2
+                    c15.1,0,26.9-7.2,35.5-21.5C1913.7,524.7,1917.3,510.6,1917.3,494.3z M2086.7,440.7c-3.9-0.7-8.1-1.1-12.5-1.1
+                    c-13.9,0-24.6,5.2-32.2,15.7c-6.6,9.3-9.9,21-9.9,35.1v93.3h-39.5V461.9c0-20.5-0.4-39.2-1.1-56h34.4l1.4,34h1.1
+                    c4.2-11.7,10.7-21.1,19.8-28.2c8.8-6.4,18.3-9.5,28.6-9.5c3.6,0,6.9,0.3,9.9,0.7L2086.7,440.7z M2263.4,486.4
+                    c0,7.1-0.5,13-1.4,17.9h-118.5c0.4,17.6,6.2,31,17.2,40.3c10,8.3,22.9,12.4,38.8,12.4c17.5,0,33.6-2.8,48-8.4l6.2,27.4
+                    c-16.8,7.3-36.7,11-59.6,11c-27.6,0-49.2-8.1-65-24.3c-15.7-16.2-23.6-38-23.6-65.3c0-26.8,7.3-49.1,22-66.9
+                    c15.3-19,36.1-28.5,62.2-28.5c25.6,0,45,9.5,58.2,28.5C2258.1,445.6,2263.4,464.3,2263.4,486.4L2263.4,486.4z M2225.7,476.2
+                    c0.3-11.7-2.3-21.8-7.7-30.4c-6.8-11-17.4-16.5-31.5-16.5c-12.9,0-23.4,5.4-31.4,16.1c-6.6,8.5-10.5,18.8-11.7,30.7L2225.7,476.2z"
+                      class=st0app />
+                  </g>
+                  <g>
+                    <path
+                      d="M867.5,123.4c9,3,16.3,8.4,21.9,16.3c4.5,6.4,7.5,13.3,9.2,20.7c1.6,7.4,2.4,14.5,2.4,21.3
+                    c0,17.1-3.4,31.5-10.3,43.4c-9.3,16-23.7,24-43.1,24h-55.4V120.6h55.4C855.6,120.7,862.2,121.7,867.5,123.4z M818.3,142.9v83.8
+                    h24.8c12.7,0,21.5-6.2,26.5-18.7c2.7-6.9,4.1-15,4.1-24.5c0-13.1-2.1-23.1-6.2-30.1c-4.1-7-12.3-10.5-24.5-10.5H818.3z"
+                      class=st0app />
+                    <path d="M981,156c6.6,3,12.1,7.7,16.4,14.1c3.9,5.6,6.4,12.2,7.6,19.6c0.7,4.4,0.9,10.6,0.8,18.9h-69.2
+                    c0.4,9.5,3.7,16.2,9.9,20c3.8,2.4,8.4,3.6,13.7,3.6c5.7,0,10.3-1.5,13.8-4.4c1.9-1.6,3.6-3.7,5.1-6.5h25.4
+                    c-0.7,5.6-3.7,11.4-9.2,17.2c-8.5,9.2-20.4,13.9-35.7,13.9c-12.6,0-23.8-3.9-33.5-11.7s-14.5-20.5-14.5-38
+                    c0-16.5,4.4-29.1,13.1-37.9c8.7-8.8,20-13.2,34-13.2C966.9,151.6,974.4,153,981,156z M943.8,177.5c-3.5,3.6-5.7,8.5-6.6,14.7H980
+                    c-0.5-6.6-2.7-11.6-6.6-15c-4-3.4-8.9-5.1-14.7-5.1C952.3,172,947.3,173.9,943.8,177.5z"
+                      class=st0app />
+                    <path d="M1037.6,218.8c0.5,4.4,1.7,7.6,3.4,9.4c3.1,3.3,8.8,5,17.2,5c4.9,0,8.8-0.7,11.7-2.2c2.9-1.5,4.3-3.6,4.3-6.5
+                    c0-2.8-1.2-4.9-3.5-6.4c-2.3-1.5-11-4-26-7.5c-10.8-2.7-18.4-6-22.8-10c-4.4-4-6.6-9.6-6.6-17.1c0-8.8,3.4-16.3,10.3-22.6
+                    c6.9-6.3,16.6-9.5,29.1-9.5c11.9,0,21.6,2.4,29,7.1c7.5,4.7,11.8,12.9,12.9,24.5h-24.8c-0.3-3.2-1.3-5.7-2.7-7.6
+                    c-2.7-3.4-7.4-5.1-14-5.1c-5.4,0-9.3,0.8-11.6,2.5c-2.3,1.7-3.5,3.7-3.5,5.9c0,2.8,1.2,4.9,3.7,6.2c2.4,1.3,11.1,3.6,25.9,6.9
+                    c9.9,2.3,17.3,5.8,22.2,10.5c4.9,4.8,7.3,10.7,7.3,17.9c0,9.4-3.5,17.1-10.5,23.1c-7,6-17.9,8.9-32.5,8.9c-15,0-26-3.2-33.1-9.5
+                    c-7.1-6.3-10.7-14.3-10.7-24.1H1037.6z" class=st0app />
+                    <path
+                      d="M1174.4,188.2c-0.5-3.5-1.7-6.7-3.6-9.6c-2.8-3.8-7.1-5.8-13-5.8c-8.4,0-14.1,4.2-17.2,12.5
+                    c-1.6,4.4-2.4,10.3-2.4,17.6c0,7,0.8,12.5,2.4,16.8c3,7.9,8.6,11.9,16.8,11.9c5.8,0,10-1.6,12.4-4.7c2.4-3.1,3.9-7.2,4.5-12.2h25.4
+                    c-0.6,7.6-3.3,14.7-8.2,21.4c-7.8,10.9-19.3,16.3-34.6,16.3c-15.3,0-26.5-4.5-33.8-13.6c-7.2-9.1-10.8-20.8-10.8-35.3
+                    c0-16.3,4-29,12-38c8-9.1,19-13.6,33-13.6c11.9,0,21.7,2.7,29.3,8c7.6,5.3,12.1,14.8,13.5,28.3H1174.4z"
+                      class=st0app />
+                    <path
+                      d="M1254.5,191.3c4.6-0.6,7.9-1.3,9.9-2.2c3.6-1.5,5.4-3.9,5.4-7.1c0-3.9-1.4-6.6-4.1-8.1
+                    c-2.7-1.5-6.8-2.2-12.1-2.2c-5.9,0-10.2,1.5-12.6,4.4c-1.8,2.1-2.9,5.1-3.5,8.7h-24c0.5-8.3,2.9-15.1,7-20.5
+                    c6.6-8.4,17.9-12.5,34-12.5c10.4,0,19.7,2.1,27.8,6.2c8.1,4.1,12.2,11.9,12.2,23.4v43.6c0,3,0.1,6.7,0.2,11
+                    c0.2,3.3,0.7,5.5,1.5,6.6c0.8,1.2,2,2.1,3.7,2.9v3.7h-27c-0.8-1.9-1.3-3.7-1.6-5.4c-0.3-1.7-0.5-3.6-0.7-5.8
+                    c-3.4,3.7-7.4,6.9-11.9,9.5c-5.4,3.1-11.5,4.6-18.2,4.6c-8.6,0-15.8-2.5-21.4-7.4c-5.6-4.9-8.5-11.9-8.5-20.9
+                    c0-11.7,4.5-20.1,13.6-25.4c5-2.8,12.3-4.9,21.9-6.1L1254.5,191.3z M1269.7,202.9c-1.6,1-3.2,1.8-4.8,2.4c-1.6,0.6-3.8,1.2-6.7,1.7
+                    l-5.7,1c-5.3,0.9-9.1,2.1-11.4,3.4c-3.9,2.3-5.9,5.8-5.9,10.5c0,4.2,1.2,7.3,3.6,9.2c2.4,1.9,5.3,2.8,8.7,2.8
+                    c5.4,0,10.4-1.6,15-4.7c4.6-3.1,6.9-8.9,7.1-17.2V202.9z M1285.2,115.2l-26.5,26.1h-18l16.7-26.1H1285.2z"
+                      class=st0app />
+                    <path d="M1368.9,151.9c0.3,0,1,0.1,2.1,0.1v25.4c-1.6-0.2-3-0.3-4.2-0.3c-1.2-0.1-2.2-0.1-3-0.1
+                    c-10,0-16.7,3.3-20.1,9.8c-1.9,3.7-2.9,9.3-2.9,16.9v45.4h-25v-95h23.7v16.6c3.8-6.3,7.2-10.7,10-13c4.6-3.9,10.7-5.8,18.1-5.8
+                    C1368.2,151.8,1368.6,151.8,1368.9,151.9z" class=st0app />
+                    <path d="M1432.6,154c6,2.5,10.9,7.1,14.6,13.8v-13.7h24.2v90.1c0,12.3-2.1,21.5-6.2,27.7c-7.1,10.7-20.7,16-40.8,16
+                    c-12.1,0-22-2.4-29.7-7.1c-7.7-4.8-11.9-11.9-12.7-21.4h27c0.7,2.9,1.8,5,3.4,6.3c2.7,2.3,7.2,3.4,13.5,3.4c8.9,0,14.9-3,18-9
+                    c2-3.8,3-10.3,3-19.3v-6.1c-2.4,4.1-4.9,7.1-7.7,9.2c-4.9,3.8-11.4,5.7-19.3,5.7c-12.2,0-21.9-4.3-29.2-12.9
+                    c-7.3-8.6-10.9-20.2-10.9-34.8c0-14.1,3.5-26,10.5-35.6c7-9.6,17-14.4,29.9-14.4C1424.9,151.8,1429.1,152.6,1432.6,154z
+                     M1441.1,222.1c4-4.4,6-11.4,6-21c0-9-1.9-15.9-5.7-20.6s-8.9-7.1-15.2-7.1c-8.7,0-14.7,4.1-18,12.3c-1.7,4.4-2.6,9.7-2.6,16.1
+                    c0,5.5,0.9,10.4,2.8,14.7c3.4,8,9.4,12,18.1,12C1432.2,228.7,1437.1,226.5,1441.1,222.1z"
+                      class=st0app />
+                    <path d="M1532.3,191.3c4.6-0.6,7.9-1.3,9.9-2.2c3.6-1.5,5.4-3.9,5.4-7.1c0-3.9-1.4-6.6-4.1-8.1
+                    c-2.7-1.5-6.8-2.2-12.1-2.2c-5.9,0-10.2,1.5-12.6,4.4c-1.8,2.1-2.9,5.1-3.5,8.7h-24c0.5-8.3,2.9-15.1,7-20.5
+                    c6.6-8.4,17.9-12.5,34-12.5c10.4,0,19.7,2.1,27.8,6.2c8.1,4.1,12.2,11.9,12.2,23.4v43.6c0,3,0.1,6.7,0.2,11
+                    c0.2,3.3,0.7,5.5,1.5,6.6c0.8,1.2,2,2.1,3.7,2.9v3.7h-27c-0.8-1.9-1.3-3.7-1.6-5.4c-0.3-1.7-0.5-3.6-0.7-5.8
+                    c-3.4,3.7-7.4,6.9-11.9,9.5c-5.4,3.1-11.5,4.6-18.2,4.6c-8.6,0-15.8-2.5-21.4-7.4c-5.6-4.9-8.5-11.9-8.5-20.9
+                    c0-11.7,4.5-20.1,13.6-25.4c5-2.8,12.3-4.9,21.9-6.1L1532.3,191.3z M1547.4,202.9c-1.6,1-3.2,1.8-4.8,2.4c-1.6,0.6-3.8,1.2-6.7,1.7
+                    l-5.7,1c-5.3,0.9-9.1,2.1-11.4,3.4c-3.9,2.3-5.9,5.8-5.9,10.5c0,4.2,1.2,7.3,3.6,9.2c2.4,1.9,5.3,2.8,8.7,2.8
+                    c5.4,0,10.4-1.6,15-4.7c4.6-3.1,6.9-8.9,7.1-17.2V202.9z" class=st0app />
+                    <path d=M1619.3,249.1h-24.8V120.6h24.8V249.1z class=st0app />
+                    <path d="M1722.7,237.5c-8,9.9-20.2,14.8-36.5,14.8c-16.3,0-28.5-4.9-36.5-14.8c-8-9.9-12-21.8-12-35.7
+                    c0-13.7,4-25.6,12-35.6c8-10,20.2-15.1,36.5-15.1c16.3,0,28.5,5,36.5,15.1s12,21.9,12,35.6C1734.7,215.7,1730.7,227.6,1722.7,237.5
+                    z M1702.8,223.7c3.9-5.2,5.8-12.5,5.8-22c0-9.5-1.9-16.8-5.8-22c-3.9-5.1-9.5-7.7-16.7-7.7c-7.3,0-12.9,2.6-16.8,7.7
+                    s-5.9,12.5-5.9,22c0,9.5,2,16.9,5.9,22s9.5,7.7,16.8,7.7C1693.4,231.5,1698.9,228.9,1702.8,223.7z"
+                      class=st0app />
+                    <path d="M1864,156c6.6,3,12.1,7.7,16.4,14.1c3.9,5.6,6.4,12.2,7.6,19.6c0.7,4.4,0.9,10.6,0.8,18.9h-69.2
+                    c0.4,9.5,3.7,16.2,9.9,20c3.8,2.4,8.4,3.6,13.7,3.6c5.7,0,10.3-1.5,13.8-4.4c1.9-1.6,3.6-3.7,5.1-6.5h25.4
+                    c-0.7,5.6-3.7,11.4-9.2,17.2c-8.5,9.2-20.4,13.9-35.7,13.9c-12.6,0-23.8-3.9-33.5-11.7s-14.5-20.5-14.5-38
+                    c0-16.5,4.4-29.1,13.1-37.9c8.7-8.8,20-13.2,34-13.2C1849.9,151.6,1857.4,153,1864,156z M1826.8,177.5c-3.5,3.6-5.7,8.5-6.6,14.7
+                    h42.8c-0.5-6.6-2.7-11.6-6.6-15c-4-3.4-8.9-5.1-14.7-5.1C1835.3,172,1830.4,173.9,1826.8,177.5z"
+                      class=st0app />
+                    <path d="M1978,159.5c6.2,5.1,9.3,13.7,9.3,25.6v64h-25.4v-57.8c0-5-0.7-8.8-2-11.5c-2.4-4.9-7-7.3-13.8-7.3
+                    c-8.4,0-14.1,3.6-17.2,10.7c-1.6,3.8-2.4,8.6-2.4,14.5v51.4h-24.8v-94.8h24.1v13.9c3.2-4.9,6.2-8.4,9-10.5
+                    c5.1-3.8,11.5-5.8,19.4-5.8C1963.7,151.8,1971.7,154.4,1978,159.5z" class=st0app />
+                    <path d="M2121.9,156c6.6,3,12.1,7.7,16.4,14.1c3.9,5.6,6.4,12.2,7.6,19.6c0.7,4.4,0.9,10.6,0.8,18.9h-69.2
+                    c0.4,9.5,3.7,16.2,9.9,20c3.8,2.4,8.4,3.6,13.7,3.6c5.7,0,10.3-1.5,13.8-4.4c1.9-1.6,3.6-3.7,5.1-6.5h25.4
+                    c-0.7,5.6-3.7,11.4-9.2,17.2c-8.5,9.2-20.4,13.9-35.7,13.9c-12.6,0-23.8-3.9-33.5-11.7c-9.7-7.8-14.5-20.5-14.5-38
+                    c0-16.5,4.4-29.1,13.1-37.9c8.7-8.8,20-13.2,34-13.2C2107.8,151.6,2115.2,153,2121.9,156z M2084.7,177.5c-3.5,3.6-5.7,8.5-6.6,14.7
+                    h42.8c-0.5-6.6-2.7-11.6-6.6-15c-4-3.4-8.9-5.1-14.7-5.1C2093.2,172,2088.2,173.9,2084.7,177.5z"
+                      class=st0app />
+                    <path d=M2184.6,249.1h-24.8V120.6h24.8V249.1z class=st0app />
+                  </g>
+                </svg>
+
+
+              </a>
+              <a target="_blank" href="#" rel="nofollow" style="width: 228px; height: 67px;">
+
+                <svg id=svg2 inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+                  sodipodi:docname=disponible-en-google-play-badge.svg style="enable-background:new 0 0 2500.8 740.9"
+                  version=1.1 viewBox="0 0 2500.8 740.9" x=0px xml:space=preserve xmlns=http://www.w3.org/2000/svg
+                  xmlns:cc=http://creativecommons.org/ns# xmlns:dc=http://purl.org/dc/elements/1.1/
+                  xmlns:inkscape=http://www.inkscape.org/namespaces/inkscape
+                  xmlns:rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#
+                  xmlns:sodipodi=http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd xmlns:svg=http://www.w3.org/2000/svg
+                  xmlns:xlink=http://www.w3.org/1999/xlink y=0px>
+
+
+                  <g id=g34_1_ transform=translate(140.0001,10.0001)>
+                    <path d="M2268.2,731H-47.4c-50.9,0-92.6-41.7-92.6-92.6V82.6C-140,31.7-98.3-10-47.4-10h2315.6
+                            c50.9,0,92.6,41.7,92.6,92.6v555.7C2360.9,689.3,2319.2,731,2268.2,731" id=path36_1_ />
+                  </g>
+                  <g id=g38_1_ transform=translate(140.0001,49.9999)>
+                    <path
+                      d="M2268.2-50H-47.4C-98.3-50-140-8.3-140,42.6v555.7c0,50.9,41.7,92.6,92.6,92.6h2315.6
+                            c50.9,0,92.6-41.7,92.6-92.6V42.7C2360.9-8.3,2319.2-50,2268.2-50 M2268.2-35.2c42.9,0,77.8,34.9,77.8,77.8v555.7
+                            c0,42.9-34.9,77.8-77.8,77.8H-47.4c-42.9,0-77.8-34.9-77.8-77.8V42.7c0-42.9,34.9-77.8,77.8-77.8L2268.2-35.2"
+                      id=path40_1_ class=st0google />
+                  </g>
+                  <path
+                    d="M1981,555.8h34.6V324.2H1981V555.8z M2292.3,407.6L2252.7,508h-1.2l-41.1-100.4h-37.2
+                          l61.7,140.3l-35.1,78.1h36l95.1-218.4H2292.3z M2096.3,529.5c-11.3,0-27.1-5.7-27.1-19.7c0-17.9,19.7-24.7,36.6-24.7
+                          c15.2,0,22.4,3.3,31.6,7.7C2134.7,514.3,2116.3,529.5,2096.3,529.5 M2100.5,402.6c-25,0-51,11-61.7,35.5l30.7,12.8
+                          c6.6-12.8,18.8-17,31.6-17c17.9,0,36,10.7,36.3,29.8v2.4c-6.3-3.6-19.7-8.9-36-8.9c-33.1,0-66.7,18.2-66.7,52.1
+                          c0,31,27.1,51,57.5,51c23.2,0,36.1-10.4,44.1-22.7h1.2v17.9h33.4v-88.8C2170.8,425.5,2140.1,402.6,2100.5,402.6 M1886.8,435.8h-49.2
+                          v-79.4h49.2c25.8,0,40.5,21.4,40.5,39.7C1927.4,414.1,1912.7,435.8,1886.8,435.8 M1885.9,324.2h-82.8v231.6h34.5v-87.7h48.3
+                          c38.3,0,76-27.8,76-71.9S1924.3,324.2,1885.9,324.2 M1434.3,529.5c-23.9,0-43.9-20-43.9-47.4c0-27.8,20-48.1,43.9-48.1
+                          c23.6,0,42.1,20.3,42.1,48.1C1476.4,509.5,1457.9,529.5,1434.3,529.5 M1474,420.6h-1.2c-7.8-9.2-22.7-17.6-41.5-17.6
+                          c-39.4,0-75.5,34.6-75.5,79.1c0,44.2,36.1,78.5,75.5,78.5c18.8,0,33.7-8.4,41.5-17.9h1.2v11.4c0,30.1-16.1,46.3-42.1,46.3
+                          c-21.2,0-34.3-15.2-39.7-28.1l-30.1,12.5c8.7,20.9,31.6,46.6,69.8,46.6c40.6,0,74.9-23.9,74.9-82.1V407.7H1474L1474,420.6
+                          L1474,420.6z M1530.7,555.8h34.6V324.2h-34.6V555.8z M1616.3,479.4c-0.9-30.4,23.6-46,41.2-46c13.7,0,25.4,6.9,29.3,16.7
+                          L1616.3,479.4z M1723.8,453.1c-6.6-17.6-26.6-50.1-67.4-50.1c-40.6,0-74.3,31.9-74.3,78.8c0,44.2,33.4,78.8,78.2,78.8
+                          c36.1,0,57-22.1,65.7-34.9l-26.9-17.9c-8.9,13.1-21.2,21.8-38.8,21.8c-17.6,0-30.1-8.1-38.2-23.9l105.4-43.6L1723.8,453.1z
+                           M884.5,427.2v33.4h80c-2.4,18.8-8.7,32.5-18.2,42.1c-11.7,11.7-29.9,24.5-61.8,24.5c-49.3,0-87.8-39.7-87.8-88.9
+                          c0-49.3,38.5-88.9,87.8-88.9c26.6,0,46,10.4,60.3,23.9l23.6-23.6c-20-19.1-46.6-33.7-83.9-33.7c-67.4,0-124.2,54.9-124.2,122.4
+                          S817,560.6,884.5,560.6c36.4,0,63.9-11.9,85.3-34.3c22.1-22.1,29-53.1,29-78.2c0-7.8-0.6-14.9-1.8-20.9L884.5,427.2z M1089.7,529.5
+                          c-23.9,0-44.5-19.7-44.5-47.7c0-28.4,20.6-47.8,44.5-47.8s44.5,19.4,44.5,47.8C1134.2,509.8,1113.6,529.5,1089.7,529.5 M1089.7,403
+                          c-43.6,0-79.1,33.1-79.1,78.8c0,45.4,35.5,78.8,79.1,78.8s79.1-33.4,79.1-78.8C1168.8,436.1,1133.3,403,1089.7,403 M1262.2,529.5
+                          c-23.9,0-44.5-19.7-44.5-47.7c0-28.4,20.6-47.8,44.5-47.8s44.5,19.4,44.5,47.8C1306.7,509.8,1286.1,529.5,1262.2,529.5 M1262.2,403
+                          c-43.6,0-79.1,33.1-79.1,78.8c0,45.4,35.5,78.8,79.1,78.8s79.1-33.4,79.1-78.8C1341.3,436.1,1305.8,403,1262.2,403"
+                    id=path42_1_ class=st1google />
+                  <g id=g44_1_>
+                    <g id=g46_1_>
+                      <g id=g52_1_>
+                        <g id=g54_1_>
+                          <linearGradient
+                            gradientTransform="matrix(-22.3765 22.3765 -22.3765 -22.3765 79617.2812 -42607.0664)"
+                            gradientUnits=userSpaceOnUse id=path70_2_ x1=2725.668 x2=2739.5615 y1=814.3593 y2=814.3593>
+                            <stop offset=0 style=stop-color:#00a0ff />
+                            <stop offset=6.574450e-03 style=stop-color:#00a1ff />
+                            <stop offset=0.2601 style=stop-color:#00beff />
+                            <stop offset=0.5122 style=stop-color:#00d2ff />
+                            <stop offset=0.7604 style=stop-color:#00dfff />
+                            <stop offset=1 style=stop-color:#00e3ff />
+                          </linearGradient>
+                          <path d="M193.3,139.7c-5.4,5.7-8.6,14.6-8.6,26l0,0v409.7c0,11.5,3.2,20.3,8.6,26l0,0l1.4,1.3
+                                  l229.5-229.5v-2.7v-2.7L194.7,138.3L193.3,139.7z" id=path70_1_ class=st3google />
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                  <g id=g72_1_>
+                    <g id=g74_1_>
+                      <g id=g80_1_>
+                        <g id=g82_1_>
+                          <linearGradient gradientTransform="matrix(-32.2625 0 0 -32.2625 88848.8594 24726.9961)"
+                            gradientUnits=userSpaceOnUse id=path94_2_ x1=2734.5076 x2=2748.4014 y1=754.9491 y2=754.9491>
+                            <stop offset=0 style=stop-color:#ffe000 />
+                            <stop offset=0.4087 style=stop-color:#ffbd00 />
+                            <stop offset=0.7754 style=stop-color:orange />
+                            <stop offset=1 style=stop-color:#ff9c00 />
+                          </linearGradient>
+                          <path d="M424.2,367.8v2.7v2.7l76.5,76.5l1.7-1l90.6-51.5c25.9-14.7,25.9-38.8,0-53.5l0,0l-90.6-51.5
+                                  l-1.7-1L424.2,367.8z" id=path94_1_ class=st3google />
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                  <g id=g96_1_>
+                    <g id=g98_1_>
+                      <g id=g104_1_>
+                        <g id=g106_1_>
+                          <linearGradient
+                            gradientTransform="matrix(-30.3444 30.3444 -30.3444 -30.3444 107005.9531 -57742.9609)"
+                            gradientUnits=userSpaceOnUse id=path114_2_ x1=2713.8799 x2=2727.7737 y1=797.348 y2=797.348>
+                            <stop offset=0 style=stop-color:#ff3a44 />
+                            <stop offset=1 style=stop-color:#c31162 />
+                          </linearGradient>
+                          <path d=M193.3,601.4c8.5,9,22.6,10.2,38.5,1.1l0,0l270.6-153.8l-78.2-78.2L193.3,601.4z
+                            id=path114_1_ class=st4google />
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                  <g id=g116_1_>
+                    <g id=g118_1_>
+                      <g id=g124_1_>
+                        <g id=g126_1_>
+                          <linearGradient gradientTransform="matrix(13.55 13.55 -13.55 13.55 -23078.0859 -46630.7617)"
+                            gradientUnits=userSpaceOnUse id=path140_2_ x1=2577.3899 x2=2591.2837 y1=864.239 y2=864.239>
+                            <stop offset=0 style=stop-color:#32a071 />
+                            <stop offset=6.850000e-02 style=stop-color:#2da771 />
+                            <stop offset=0.4762 style=stop-color:#15cf74 />
+                            <stop offset=0.8009 style=stop-color:#06e775 />
+                            <stop offset=1 style=stop-color:#00f076 />
+                          </linearGradient>
+                          <path d="M193.3,139.7l230.9,230.9l78.2-78.2L231.8,138.5c-7.4-4.2-14.5-6.2-20.8-6.2l0,0
+                                  C203.9,132.3,197.8,134.9,193.3,139.7" id=path140_1_ class=st5google />
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                  <g id=g166_1_>
+                    <g id=g168_1_></g>
+                    <g id=g180_1_>
+                      <g>
+                        <g>
+                          <g>
+                            <defs>
+                              <rect height=28.7 id=SVGID_1_ width=10 x=184.7 y=572.7 />
+                            </defs>
+                            <clipPath id=SVGID_2_>
+                              <use style=overflow:visible xlink:href=#SVGID_1_ />
+                            </clipPath>
+                            <g id=g178_1_ class=st6google>
+                              <g id=g176_1_ transform=translate(20.4354,17.6817)>
+                                <path
+                                  d=M172.9,581c-5.4-5.7-8.6-14.6-8.6-26v2.7c0,11.5,3.2,20.3,8.6,26l1.4-1.4L172.9,581z
+                                  id=path174_1_ />
+                              </g>
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                  <g id=g214_1_ transform=translate(52.0508,37.7373)>
+                    <path d="M726.9,189.5h19.7c12.8,0,23-3.7,30.5-11c7.5-7.4,11.2-17.7,11.2-30.9
+                            c0-13.1-3.7-23.4-11.2-30.8s-17.7-11.1-30.5-11.1h-19.7V189.5z M712.7,203.1V92h34c17.1,0,30.8,5.1,41,15.4s15.4,23.7,15.4,40.1
+                            c0,16.5-5.1,29.8-15.4,40.1c-10.2,10.3-23.9,15.4-41,15.4h-34V203.1z" id=path216_1_
+                      class=st1google />
+                  </g>
+                  <g id=g218_1_ transform=translate(52.0508,37.7373)>
+                    <path d="M726.9,189.5h19.7c12.8,0,23-3.7,30.5-11c7.5-7.4,11.2-17.7,11.2-30.9
+                            c0-13.1-3.7-23.4-11.2-30.8s-17.7-11.1-30.5-11.1h-19.7V189.5z M712.7,203.1V92h34c17.1,0,30.8,5.1,41,15.4s15.4,23.7,15.4,40.1
+                            c0,16.5-5.1,29.8-15.4,40.1c-10.2,10.3-23.9,15.4-41,15.4h-34V203.1z" id=path220_1_
+                      class=st7google />
+                  </g>
+                  <path d=M875.1,129.7h14.3v111.1h-14.3V129.7z id=path222_1_ class=st8google />
+                  <g id=g224_1_ transform=translate(61.0762,36.8662)>
+                    <path d="M885.1,206.5c-8.1,0-15.9-2.6-23.7-7.9c-7.7-5.3-12.8-12.7-15.2-22.2l13-5.3
+                            c1.6,6.1,4.7,11.2,9.5,15.4s10.2,6.3,16.2,6.3c6.2,0,11.5-1.6,15.9-4.9c4.4-3.3,6.6-7.7,6.6-13.3c0-6.2-2.2-11-6.6-14.4
+                            c-4.4-3.4-11.4-6.5-20.9-9.4c-9.8-3.1-17.3-7.1-22.4-12c-5.1-4.9-7.6-11.2-7.6-18.9c0-8,3.2-14.9,9.5-20.8
+                            c6.3-5.9,14.5-8.9,24.7-8.9c9.4,0,17.1,2.4,23,7.1s9.7,9.9,11.5,15.4l-13,5.4c-0.9-3.5-3.2-6.8-6.9-9.8s-8.4-4.5-14.2-4.5
+                            c-5.5,0-10.2,1.5-14,4.6c-3.9,3.1-5.8,6.9-5.8,11.4c0,4.1,1.8,7.7,5.4,10.5c3.6,2.9,8.8,5.4,15.8,7.7c5.5,1.8,10.1,3.5,13.7,5.1
+                            c3.7,1.6,7.4,3.9,11.2,6.6c3.8,2.7,6.6,6.2,8.5,10.2c1.9,4.1,2.9,8.8,2.9,14.2s-1.1,10.2-3.3,14.4s-5.2,7.6-8.9,10.1
+                            s-7.6,4.4-11.9,5.7C893.9,205.8,889.6,206.5,885.1,206.5" id=path226_1_ class=st1google />
+                  </g>
+                  <g id=g228_1_ transform=translate(61.0762,36.8662)>
+                    <path d="M885.1,206.5c-8.1,0-15.9-2.6-23.7-7.9c-7.7-5.3-12.8-12.7-15.2-22.2l13-5.3
+                            c1.6,6.1,4.7,11.2,9.5,15.4s10.2,6.3,16.2,6.3c6.2,0,11.5-1.6,15.9-4.9c4.4-3.3,6.6-7.7,6.6-13.3c0-6.2-2.2-11-6.6-14.4
+                            c-4.4-3.4-11.4-6.5-20.9-9.4c-9.8-3.1-17.3-7.1-22.4-12c-5.1-4.9-7.6-11.2-7.6-18.9c0-8,3.2-14.9,9.5-20.8
+                            c6.3-5.9,14.5-8.9,24.7-8.9c9.4,0,17.1,2.4,23,7.1s9.7,9.9,11.5,15.4l-13,5.4c-0.9-3.5-3.2-6.8-6.9-9.8s-8.4-4.5-14.2-4.5
+                            c-5.5,0-10.2,1.5-14,4.6c-3.9,3.1-5.8,6.9-5.8,11.4c0,4.1,1.8,7.7,5.4,10.5c3.6,2.9,8.8,5.4,15.8,7.7c5.5,1.8,10.1,3.5,13.7,5.1
+                            c3.7,1.6,7.4,3.9,11.2,6.6c3.8,2.7,6.6,6.2,8.5,10.2c1.9,4.1,2.9,8.8,2.9,14.2s-1.1,10.2-3.3,14.4s-5.2,7.6-8.9,10.1
+                            s-7.6,4.4-11.9,5.7C893.9,205.8,889.6,206.5,885.1,206.5z" id=path230_1_ class=st7google />
+                  </g>
+                  <g id=g232_1_ transform=translate(64.9561,40.168)>
+                    <path d="M953.1,142H977c6,0,10.8-2,14.4-6c3.6-4,5.4-8.5,5.4-13.4s-1.8-9.3-5.4-13.4
+                            c-3.6-4-8.4-6.1-14.4-6.1h-23.9V142z M953.1,200.7h-14.3V89.5h37.9c9.4,0,17.6,3.1,24.5,9.4s10.3,14.2,10.3,23.7
+                            s-3.4,17.4-10.3,23.7c-6.9,6.3-15,9.4-24.5,9.4h-23.6L953.1,200.7L953.1,200.7z" id=path234_1_
+                      class=st1google />
+                  </g>
+                  <g id=g236_1_ transform=translate(64.9561,40.168)>
+                    <path d="M953.1,142H977c6,0,10.8-2,14.4-6c3.6-4,5.4-8.5,5.4-13.4s-1.8-9.3-5.4-13.4
+                            c-3.6-4-8.4-6.1-14.4-6.1h-23.9V142z M953.1,200.7h-14.3V89.5h37.9c9.4,0,17.6,3.1,24.5,9.4s10.3,14.2,10.3,23.7
+                            s-3.4,17.4-10.3,23.7c-6.9,6.3-15,9.4-24.5,9.4h-23.6L953.1,200.7L953.1,200.7z" id=path238_1_
+                      class=st7google />
+                  </g>
+                  <g id=g240_1_ transform=translate(70.1553,38.2778)>
+                    <path d="M1044.2,178.9c8.2,8.3,18.3,12.5,30.2,12.5c11.9,0,22-4.1,30.2-12.5
+                            c8.2-8.3,12.4-19,12.4-31.9s-4.1-23.6-12.4-31.9c-8.2-8.3-18.3-12.5-30.2-12.5c-11.9,0-22,4.2-30.2,12.5s-12.3,19-12.3,31.9
+                            S1036,170.6,1044.2,178.9 M1115.2,188.2c-10.9,11.2-24.5,16.9-40.8,16.9s-29.8-5.6-40.7-16.9c-10.9-11.2-16.4-25-16.4-41.2
+                            s5.4-30,16.4-41.2c10.9-11.2,24.5-16.9,40.7-16.9s29.7,5.7,40.7,16.9c11,11.3,16.5,25,16.5,41.1
+                            C1131.5,163.2,1126.1,177,1115.2,188.2" id=path242_1_ class=st1google />
+                  </g>
+                  <g id=g244_1_ transform=translate(70.1553,38.2778)>
+                    <path d="M1044.2,178.9c8.2,8.3,18.3,12.5,30.2,12.5c11.9,0,22-4.1,30.2-12.5
+                            c8.2-8.3,12.4-19,12.4-31.9s-4.1-23.6-12.4-31.9c-8.2-8.3-18.3-12.5-30.2-12.5c-11.9,0-22,4.2-30.2,12.5s-12.3,19-12.3,31.9
+                            S1036,170.6,1044.2,178.9z M1115.2,188.2c-10.9,11.2-24.5,16.9-40.8,16.9s-29.8-5.6-40.7-16.9c-10.9-11.2-16.4-25-16.4-41.2
+                            s5.4-30,16.4-41.2c10.9-11.2,24.5-16.9,40.7-16.9s29.7,5.7,40.7,16.9c11,11.3,16.5,25,16.5,41.1
+                            C1131.5,163.2,1126.1,177,1115.2,188.2z" id=path246_1_ class=st7google />
+                  </g>
+                  <g id=g248_1_ transform=translate(75.9512,37)>
+                    <path d="M1145.8,203.9V92.7h17.4l54,86.5h0.6l-0.6-21.4v-65h14.3v111.1h-14.9l-56.5-90.7h-0.6
+                            l0.6,21.4v69.2L1145.8,203.9L1145.8,203.9z" id=path250_1_ class=st1google />
+                  </g>
+                  <g id=g252_1_ transform=translate(75.9512,37)>
+                    <path d="M1145.8,203.9V92.7h17.4l54,86.5h0.6l-0.6-21.4v-65h14.3v111.1h-14.9l-56.5-90.7h-0.6
+                            l0.6,21.4v69.2L1145.8,203.9L1145.8,203.9z" id=path254_1_ class=st7google />
+                  </g>
+                  <path d=M1332.9,129.7h14.3v111.1h-14.3V129.7z id=path256_1_ class=st8google />
+                  <g id=g258_1_ transform=translate(84.8662,37.7373)>
+                    <path d="M1302,189.5h28.7c5.5,0,9.9-1.9,13.3-5.8c3.4-3.8,5.1-8,5.1-12.6s-1.8-8.7-5.3-12.5
+                            s-8.1-5.7-13.8-5.7h-28.1v36.6L1302,189.5L1302,189.5z M1302,139.6h25.9c5.4,0,9.7-1.8,13-5.4c3.2-3.6,4.9-7.5,4.9-11.7
+                            s-1.6-8.1-4.7-11.6s-7.3-5.3-12.5-5.3H1302L1302,139.6L1302,139.6z M1287.7,203.1V92h40.2c8.7,0,16.2,2.9,22.6,8.6
+                            c6.4,5.8,9.6,13,9.6,21.7c0,5.3-1.4,9.9-4.1,14c-2.7,4-6.4,7.1-10.9,9.2v0.6c5.5,1.9,10,5.1,13.5,9.6c3.5,4.6,5.3,9.8,5.3,15.8
+                            c0,9.1-3.4,16.7-10,22.7c-6.7,6-14.6,9-23.7,9h-42.5V203.1z" id=path260_1_ class=st1google />
+                  </g>
+                  <g id=g262_1_ transform=translate(84.8662,37.7373)>
+                    <path d="M1302,189.5h28.7c5.5,0,9.9-1.9,13.3-5.8c3.4-3.8,5.1-8,5.1-12.6s-1.8-8.7-5.3-12.5
+                            s-8.1-5.7-13.8-5.7h-28.1v36.6L1302,189.5L1302,189.5z M1302,139.6h25.9c5.4,0,9.7-1.8,13-5.4c3.2-3.6,4.9-7.5,4.9-11.7
+                            s-1.6-8.1-4.7-11.6s-7.3-5.3-12.5-5.3H1302L1302,139.6L1302,139.6z M1287.7,203.1V92h40.2c8.7,0,16.2,2.9,22.6,8.6
+                            c6.4,5.8,9.6,13,9.6,21.7c0,5.3-1.4,9.9-4.1,14c-2.7,4-6.4,7.1-10.9,9.2v0.6c5.5,1.9,10,5.1,13.5,9.6c3.5,4.6,5.3,9.8,5.3,15.8
+                            c0,9.1-3.4,16.7-10,22.7c-6.7,6-14.6,9-23.7,9h-42.5V203.1z" id=path264_1_ class=st7google />
+                  </g>
+                  <g id=g266_1_ transform=translate(89.2412,37)>
+                    <path d=M1378.7,203.9V92.7h14.3v97.5h48.1v13.7H1378.7z id=path268_1_ class=st1google />
+                  </g>
+                  <g id=g270_1_ transform=translate(89.2412,37)>
+                    <path d=M1378.7,203.9V92.7h14.3v97.5h48.1v13.7H1378.7z id=path272_1_ class=st7google />
+                  </g>
+                  <g id=g274_1_ transform=translate(97.085,42.2627)>
+                    <path d="M1516.2,101.1h-50.7v35.2h45.6v13.4h-45.6v35.2h50.6v13.7h-64.9V87.4h64.9L1516.2,101.1
+                            L1516.2,101.1z" id=path276_1_ class=st1google />
+                  </g>
+                  <g id=g278_1_ transform=translate(97.085,42.2627)>
+                    <path d="M1516.2,101.1h-50.7v35.2h45.6v13.4h-45.6v35.2h50.6v13.7h-64.9V87.4h64.9L1516.2,101.1
+                            L1516.2,101.1z" id=path280_1_ class=st7google />
+                  </g>
+                  <g id=g282_1_ transform=translate(103.8057,42.2627)>
+                    <path d=M1633.9,101.1h-50.6v35.2h45.6v13.4h-45.6v35.2h50.6v13.7H1569V87.4h64.9V101.1z id=path284_1_
+                      class=st1google />
+                  </g>
+                  <g id=g286_1_ transform=translate(103.8057,42.2627)>
+                    <path d=M1633.9,101.1h-50.6v35.2h45.6v13.4h-45.6v35.2h50.6v13.7H1569V87.4h64.9V101.1z id=path288_1_
+                      class=st7google />
+                  </g>
+                  <g id=g290_1_ transform=translate(105.0117,37)>
+                    <path d="M1655.1,203.9V92.7h17.4l54,86.5h0.6l-0.6-21.4v-65h14.3v111.1h-14.9l-56.5-90.7h-0.6
+                            l0.6,21.4v69.2L1655.1,203.9L1655.1,203.9z" id=path292_1_ class=st1google />
+                  </g>
+                  <g id=g294_1_ transform=translate(105.0117,37)>
+                    <path d="M1655.1,203.9V92.7h17.4l54,86.5h0.6l-0.6-21.4v-65h14.3v111.1h-14.9l-56.5-90.7h-0.6
+                            l0.6,21.4v69.2L1655.1,203.9L1655.1,203.9z" id=path296_1_ class=st7google />
+                  </g>
+                </svg>
+
+              </a>
+              <a target="_blank" href="#" rel="nofollow" style="width: 228px; height: 67px;">
+
+                <svg id=svg2 inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+                  sodipodi:docname=disponible-en-google-play-badge.svg style="enable-background:new 0 0 2469.6 741"
+                  version=1.1 viewBox="0 0 2469.6 741" x=0px xml:space=preserve xmlns=http://www.w3.org/2000/svg
+                  xmlns:cc=http://creativecommons.org/ns# xmlns:dc=http://purl.org/dc/elements/1.1/
+                  xmlns:inkscape=http://www.inkscape.org/namespaces/inkscape
+                  xmlns:rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#
+                  xmlns:sodipodi=http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd xmlns:svg=http://www.w3.org/2000/svg
+                  xmlns:xlink=http://www.w3.org/1999/xlink y=0px>
+
+                  <g>
+                    <path d="M2295.2,0H173.1c-6.2,0-13.7,0-19.9,0c-5,0-11.2,0-16.2,0c-12.5,0-24.9,1.2-36.1,3.7C88.4,6.2,77.2,10,66,14.9
+                  c-11.2,6.2-21.2,12.5-29.9,21.2S19.9,54.8,14.9,66C8.7,77.2,6.2,88.4,3.7,100.9C1.2,113.3,1.2,125.8,0,137c0,6.2,0,11.2,0,17.4
+                  c0,6.2,0,13.7,0,19.9v392.3c0,6.2,0,13.7,0,19.9c0,6.2,0,11.2,0,17.4c0,12.5,1.2,24.9,3.7,36.1c2.5,12.5,6.2,23.7,11.2,34.9
+                  s12.5,21.2,21.2,29.9c8.7,8.7,18.7,16.2,29.9,21.2c11.2,6.2,22.4,8.7,34.9,11.2c12.5,2.5,24.9,2.5,36.1,3.7c6.2,0,11.2,0,16.2,0
+                  c6.2,0,13.7,0,19.9,0h2122.1c6.2,0,13.7,0,19.9,0c5,0,11.2,0,17.4,0c12.5,0,24.9-1.2,36.1-3.7c12.5-2.5,23.7-6.2,34.9-11.2
+                  c11.2-5,21.2-12.5,29.9-21.2c8.7-8.7,16.2-18.7,21.2-29.9c6.2-11.2,8.7-22.4,11.2-34.9c2.5-12.5,2.5-24.9,3.7-36.1
+                  c0-6.2,0-11.2,0-17.4s0-13.7,0-19.9V174.4c0-6.2,0-13.7,0-19.9c0-6.2,0-11.2,0-17.4c0-12.5-1.2-24.9-3.7-36.1
+                  c-2.5-12.5-6.2-23.7-11.2-34.9c-6.2-11.2-12.5-21.2-21.2-29.9c-8.7-8.7-18.7-16.2-29.9-21.2c-11.2-6.2-22.4-8.7-34.9-11.2
+                  s-24.9-2.5-36.1-3.7c-5,0-11.2,0-17.4,0C2308.9,0,2301.5,0,2295.2,0L2295.2,0z" class=st0appgalery />
+                    <path d="M153.2,726.1c-5,0-11.2,0-16.2,0c-10,0-22.4-1.2-33.6-2.5c-11.2-2.5-21.2-5-29.9-10c-10-5-18.7-11.2-26.2-18.7
+                  c-7.5-7.5-13.7-16.2-18.7-26.2c-5-8.7-7.5-18.7-10-29.9c-2.5-12.5-2.5-24.9-2.5-34.9c0-3.7,0-16.2,0-16.2V154.4c0,0,0-12.5,0-16.2
+                  c0-10,1.2-22.4,2.5-34.9c2.5-11.2,5-21.2,10-29.9c5-10,11.2-18.7,18.7-26.2c7.5-7.5,16.2-13.7,26.2-18.7s19.9-7.5,29.9-10
+                  c12.5-2.5,24.9-2.5,34.9-2.5h16.2h2162h16.2c10,0,22.4,1.2,33.6,2.5c11.2,2.5,21.2,5,31.1,10c10,5,17.4,11.2,24.9,18.7
+                  s13.7,16.2,18.7,26.2s7.5,18.7,10,29.9s2.5,23.7,3.7,34.9c0,5,0,11.2,0,16.2c0,7.5,0,13.7,0,19.9v392.3c0,6.2,0,13.7,0,19.9
+                  s0,11.2,0,17.4c0,11.2-1.2,22.4-3.7,33.6c-2.5,11.2-5,21.2-10,31.1c-5,10-11.2,18.7-18.7,24.9c-7.5,7.5-16.2,13.7-26.2,18.7
+                  s-18.7,7.5-31.1,10c-11.2,2.5-23.7,2.5-33.6,2.5c-5,0-11.2,0-16.2,0h-19.9L153.2,726.1z" />
+                  </g>
+                  <g>
+                    <path d=M767.2,140.7h66l-1.2,17.4h-42.3v27.4h39.9v16.2h-39.9v29.9h44.8l-1.2,17.4h-66V140.7z
+                      class=st1appgalery />
+                    <path d="M876.7,194.3l-33.6-53.6H868l21.2,37.4l22.4-37.4h23.7L901.7,193l36.1,56h-24.9L888,208L863,249.1h-23.7
+                  L876.7,194.3z" class=st1appgalery />
+                    <path
+                      d="M952.7,140.7h31.1c13.7,0,24.9,2.5,32.4,8.7c7.5,6.2,11.2,13.7,11.2,24.9c0,7.5-1.2,13.7-5,18.7
+                  c-3.7,5-7.5,10-13.7,12.5c-6.2,2.5-12.5,3.7-19.9,3.7c-5,0-8.7,0-13.7-1.2v41.1h-22.4V140.7z M1000,188.1c3.7-3.7,5-7.5,5-13.7
+                  c0-6.2-2.5-11.2-6.2-13.7s-10-3.7-16.2-3.7h-8.7V193c3.7,1.2,7.5,1.2,10,1.2C991.3,193,996.3,191.8,1000,188.1z"
+                      class=st1appgalery />
+                    <path d=M1044.9,140.7h22.4v90.9h43.6l-1.2,18.7h-63.5V140.7H1044.9z class=st1appgalery />
+                    <path d="M1139.5,244.1c-8.7-5-13.7-11.2-18.7-18.7c-3.7-8.7-6.2-17.4-6.2-28.6c0-11.2,2.5-21.2,7.5-29.9
+                  c5-8.7,11.2-14.9,19.9-19.9c8.7-5,18.7-7.5,29.9-7.5c11.2,0,21.2,2.5,28.6,6.2c7.5,5,13.7,11.2,18.7,18.7c5,7.5,6.2,17.4,6.2,28.6
+                  c0,11.2-2.5,22.4-7.5,29.9c-5,8.7-11.2,14.9-19.9,19.9c-8.7,5-18.7,7.5-29.9,7.5C1158.2,250.3,1148.2,249.1,1139.5,244.1z
+                   M1188.1,229.1c5-3.7,8.7-7.5,11.2-13.7c2.5-6.2,3.7-12.5,3.7-19.9s-1.2-13.7-3.7-19.9c-2.5-6.2-6.2-10-10-13.7
+                  c-5-3.7-11.2-5-18.7-5c-7.5,0-13.7,1.2-18.7,5c-5,3.7-8.7,8.7-11.2,13.7c-2.5,6.2-3.7,12.5-3.7,19.9s1.2,13.7,3.7,19.9
+                  c2.5,6.2,6.2,11.2,11.2,13.7c5,3.7,11.2,5,17.4,5C1176.9,234.1,1183.1,231.6,1188.1,229.1z M1155.7,132l19.9-23.7l22.4,2.5
+                  l-27.4,23.7L1155.7,132z" class=st1appgalery />
+                    <path
+                      d="M1245.4,140.7h36.1c12.5,0,22.4,2.5,29.9,7.5s10,12.5,10,21.2c0,6.2-1.2,11.2-3.7,14.9c-2.5,5-5,7.5-8.7,11.2
+                  c-3.7,3.7-6.2,5-10,6.2l33.6,48.6h-24.9l-27.4-42.3h-12.5v42.3h-22.4V140.7z M1276.5,190.5c3.7,0,7.5-1.2,11.2-2.5
+                  c3.7-1.2,6.2-3.7,7.5-7.5c1.2-2.5,2.5-6.2,2.5-10c0-5-1.2-8.7-5-11.2c-2.5-2.5-7.5-3.7-13.7-3.7h-12.5v33.6h10V190.5z"
+                      class=st1appgalery />
+                    <path d="M1406,221.7h-41.1l-10,27.4h-22.4l42.3-109.6h21.2l43.6,109.6H1416L1406,221.7z M1371.2,204.2h29.9l-10-28.6
+                  c-1.2-3.7-2.5-8.7-5-13.7c-1.2,5-2.5,8.7-3.7,13.7L1371.2,204.2z" class=st1appgalery />
+                    <path d=M1453.4,140.7h22.4v90.9h43.6l-1.2,18.7h-63.5V140.7H1453.4z class=st1appgalery />
+                    <path d="M1548,244.1c-8.7-5-13.7-11.2-18.7-18.7c-3.7-8.7-6.2-17.4-6.2-28.6c0-11.2,2.5-21.2,7.5-29.9
+                  c5-8.7,11.2-14.9,19.9-19.9c8.7-5,18.7-7.5,29.9-7.5c11.2,0,21.2,2.5,28.6,6.2c7.5,5,13.7,11.2,18.7,18.7c5,7.5,6.2,17.4,6.2,28.6
+                  c0,11.2-2.5,22.4-7.5,29.9c-5,8.7-11.2,14.9-19.9,19.9s-18.7,7.5-29.9,7.5C1565.4,250.3,1555.5,249.1,1548,244.1z M1596.6,229.1
+                  c5-3.7,8.7-7.5,11.2-13.7c2.5-6.2,3.7-12.5,3.7-19.9s-1.2-13.7-3.7-19.9c-2.5-6.2-6.2-10-10-13.7c-5-3.7-11.2-5-18.7-5
+                  c-7.5,0-13.7,1.2-18.7,5c-5,3.7-8.7,8.7-11.2,13.7c-2.5,6.2-3.7,12.5-3.7,19.9s1.2,13.7,3.7,19.9c2.5,6.2,6.2,11.2,11.2,13.7
+                  c5,3.7,11.2,5,17.4,5C1585.4,234.1,1591.6,231.6,1596.6,229.1z" class=st1appgalery />
+                    <path
+                      d=M1702.4,140.7h66l-1.2,17.4h-42.3v27.4h39.9v16.2h-39.9v29.9h44.8l-1.2,17.4h-64.8V140.7H1702.4z
+                      class=st1appgalery />
+                    <path d="M1789.6,140.7h24.9l51.1,80.9c0-8.7-1.2-16.2-1.2-22.4v-58.5h19.9v109.6h-24.9l-51.1-82.2
+                  c0,10,1.2,17.4,1.2,26.2v56h-19.9V140.7z" class=st1appgalery />
+                  </g>
+                  <g>
+                    <path d="M915.4,501.9h-85.9l-21.2,57.3h-37.4L854.3,345h36.1l85.9,214.2h-39.9L915.4,501.9z M840.6,472h63.5l-22.4-61
+                  c-3.7-8.7-6.2-17.4-8.7-28.6c-2.5,8.7-6.2,18.7-8.7,27.4L840.6,472z" class=st1appgalery />
+                    <path
+                      d="M992.6,438.4c0-12.5,0-24.9-1.2-38.6h34.9c1.2,6.2,2.5,13.7,2.5,19.9c13.7-14.9,29.9-23.7,48.6-23.7
+                  c11.2,0,19.9,2.5,29.9,7.5c8.7,5,16.2,13.7,22.4,24.9c5,11.2,8.7,26.2,8.7,43.6c0,18.7-3.7,34.9-10,47.3
+                  c-6.2,13.7-14.9,23.7-26.2,29.9c-11.2,6.2-24.9,10-39.9,10c-11.2,0-21.2-1.2-32.4-5v66l-36.1,2.5V438.4H992.6z M1089.7,519.3
+                  c7.5-10,11.2-24.9,11.2-43.6c0-17.4-2.5-31.1-8.7-38.6c-6.2-7.5-14.9-12.5-24.9-12.5c-7.5,0-13.7,1.2-19.9,5
+                  c-6.2,3.7-11.2,7.5-17.4,13.7v85.9c3.7,1.2,7.5,3.7,12.5,3.7c5,0,10,1.2,14.9,1.2C1071,535.5,1082.2,529.3,1089.7,519.3z"
+                      class=st1appgalery />
+                    <path
+                      d="M1160.7,438.4c0-12.5,0-24.9-1.2-38.6h34.9c1.2,6.2,2.5,13.7,2.5,19.9c13.7-14.9,29.9-23.7,48.6-23.7
+                  c11.2,0,19.9,2.5,29.9,7.5c8.7,5,16.2,13.7,22.4,24.9c5,11.2,8.7,26.2,8.7,43.6c0,18.7-3.7,34.9-10,47.3
+                  c-6.2,13.7-14.9,23.7-26.2,29.9c-11.2,6.2-24.9,10-39.9,10c-11.2,0-21.2-1.2-32.4-5v66l-36.1,2.5V438.4H1160.7z M1256.6,519.3
+                  c7.5-10,11.2-24.9,11.2-43.6c0-17.4-2.5-31.1-8.7-38.6c-6.2-7.5-14.9-12.5-24.9-12.5c-7.5,0-13.7,1.2-19.9,5
+                  c-6.2,3.7-11.2,7.5-17.4,13.7v85.9c3.7,1.2,7.5,3.7,12.5,3.7s10,1.2,14.9,1.2C1239.2,535.5,1249.1,529.3,1256.6,519.3z"
+                      class=st1appgalery />
+                    <path
+                      d="M1374.9,549.2c-16.2-8.7-27.4-21.2-36.1-37.4s-12.5-34.9-12.5-57.3c0-23.7,5-44.8,14.9-61
+                  c10-16.2,23.7-29.9,39.9-37.4c16.2-8.7,36.1-12.5,56-12.5c12.5,0,23.7,1.2,34.9,3.7c11.2,2.5,21.2,6.2,31.1,11.2l-8.7,28.6
+                  c-19.9-8.7-37.4-13.7-56-13.7c-14.9,0-27.4,3.7-38.6,10c-11.2,6.2-19.9,16.2-26.2,27.4c-6.2,12.5-8.7,27.4-8.7,44.8
+                  c0,14.9,2.5,28.6,7.5,41.1c5,12.5,12.5,21.2,22.4,28.6c10,7.5,23.7,10,38.6,10c7.5,0,13.7,0,21.2-1.2c7.5-1.2,13.7-2.5,19.9-5
+                  v-43.6h-49.8v-28.6h84.7v89.7c-12.5,6.2-24.9,10-38.6,13.7c-13.7,2.5-27.4,5-39.9,5C1408.5,561.7,1389.8,557.9,1374.9,549.2z"
+                      class=st1appgalery />
+                    <path d="M1640.2,559.2c-1.2-6.2-2.5-13.7-2.5-21.2c-6.2,6.2-12.5,12.5-22.4,17.4c-8.7,5-18.7,7.5-31.1,7.5
+                  c-8.7,0-17.4-1.2-24.9-5c-7.5-3.7-13.7-8.7-17.4-16.2c-5-7.5-6.2-16.2-6.2-26.2c0-14.9,5-27.4,16.2-37.4c11.2-10,29.9-13.7,56-13.7
+                  c10,0,19.9,1.2,28.6,2.5v-2.5c0-13.7-2.5-23.7-8.7-29.9c-6.2-6.2-14.9-8.7-26.2-8.7c-7.5,0-16.2,1.2-24.9,3.7
+                  c-8.7,2.5-16.2,5-23.7,8.7l-6.2-26.2c6.2-2.5,14.9-6.2,26.2-8.7c11.2-2.5,22.4-3.7,33.6-3.7c13.7,0,24.9,2.5,34.9,6.2
+                  c10,3.7,17.4,11.2,22.4,21.2c5,10,8.7,23.7,8.7,41.1v63.5c0,6.2,0,16.2,1.2,29.9h-33.6V559.2z M1619,529.3
+                  c7.5-3.7,13.7-8.7,18.7-13.7v-29.9c-10-1.2-18.7-1.2-24.9-1.2c-14.9,0-24.9,2.5-31.1,7.5c-6.2,5-8.7,11.2-8.7,19.9
+                  c0,7.5,2.5,13.7,6.2,17.4c3.7,3.7,10,6.2,17.4,6.2C1604,534.3,1611.5,533,1619,529.3z"
+                      class=st1appgalery />
+                    <path d="M1706.2,520.6V332.5l36.1-2.5v185.6c0,6.2,1.2,11.2,3.7,14.9c2.5,2.5,6.2,3.7,11.2,3.7c2.5,0,5,0,10-1.2
+                  l3.7,26.2c-3.7,1.2-7.5,2.5-12.5,3.7s-10,1.2-13.7,1.2C1718.6,561.7,1706.2,548,1706.2,520.6z"
+                      class=st1appgalery />
+                    <path d="M1797.1,520.6V332.5l36.1-2.5v185.6c0,6.2,1.2,11.2,3.7,14.9c2.5,2.5,6.2,3.7,11.2,3.7c2.5,0,5,0,10-1.2
+                  l3.7,26.2c-3.7,1.2-7.5,2.5-12.5,3.7s-10,1.2-13.7,1.2C1809.5,561.7,1797.1,548,1797.1,520.6z"
+                      class=st1appgalery />
+                    <path d="M2012.5,483.2h-104.6c1.2,33.6,17.4,49.8,47.3,49.8c7.5,0,14.9-1.2,22.4-2.5c7.5-1.2,14.9-3.7,22.4-7.5
+                  l7.5,24.9c-17.4,8.7-37.4,12.5-59.8,12.5c-17.4,0-31.1-3.7-42.3-10c-11.2-6.2-19.9-16.2-26.2-27.4c-6.2-12.5-8.7-26.2-8.7-43.6
+                  c0-17.4,2.5-32.4,8.7-46.1c6.2-12.5,14.9-22.4,26.2-28.6c11.2-6.2,23.7-10,38.6-10c14.9,0,27.4,3.7,37.4,10
+                  c10,7.5,17.4,16.2,22.4,28.6c5,11.2,7.5,24.9,7.5,38.6v11.2H2012.5z M1977.7,460.8c-1.2-12.5-3.7-22.4-10-28.6s-13.7-10-22.4-10
+                  c-8.7,0-17.4,3.7-23.7,10c-6.2,6.2-10,16.2-12.5,28.6H1977.7z" class=st1appgalery />
+                    <path d="M2042.4,439.6c0-8.7,0-22.4-1.2-39.9h33.6c0,5,1.2,10,1.2,16.2c0,6.2,1.2,11.2,1.2,14.9
+                  c3.7-7.5,8.7-12.5,12.5-17.4s8.7-8.7,14.9-11.2c5-2.5,11.2-5,18.7-5c6.2,0,10,0,14.9,1.2l-5,31.1c-3.7-1.2-7.5-1.2-12.5-1.2
+                  c-8.7,0-16.2,2.5-22.4,6.2c-6.2,3.7-13.7,11.2-19.9,21.2v102.1h-36.1V439.6z" class=st1appgalery />
+                    <path d="M2159.5,623.9c-5-1.2-10-2.5-13.7-3.7l6.2-26.2c2.5,1.2,5,1.2,8.7,2.5c3.7,1.2,7.5,1.2,11.2,1.2
+                  c16.2,0,28.6-10,36.1-31.1l2.5-6.2L2152,399.8h38.6l29.9,89.7c5,14.9,7.5,27.4,8.7,34.9c2.5-11.2,6.2-23.7,10-34.9l29.9-90.9h37.4
+                  l-58.5,161.9c-5,14.9-11.2,27.4-17.4,37.4c-6.2,10-13.7,16.2-22.4,21.2c-8.7,5-18.7,6.2-31.1,6.2
+                  C2170.7,625.2,2165.7,625.2,2159.5,623.9z" class=st1appgalery />
+                  </g>
+                  <g>
+                    <g id=形状_1_拷贝_25_5_>
+                      <g>
+                        <path d="M499.4,135.7H292.7c-97.1,0-133.3,36.1-133.3,133.3v206.7c0,97.1,36.1,133.3,133.3,133.3h206.7
+                      c97.1,0,133.3-36.1,133.3-133.3v-208C632.7,170.6,596.5,135.7,499.4,135.7z" class=st2appgalery />
+                      </g>
+                    </g>
+                    <path d="M254.1,371.1h12.5v62.3h-12.5v-24.9h-28.6v24.9H213v-62.3h12.5V396h28.6V371.1z M323.8,406
+                  c0,10-5,14.9-13.7,14.9s-13.7-5-13.7-16.2v-33.6h-12.5V406c0,17.4,10,27.4,26.2,27.4c17.4,0,26.2-10,26.2-27.4v-34.9h-12.5V406z
+                   M469.5,413.5l-14.9-42.3h-10l-13.7,42.3l-13.7-42.3h-13.7l21.2,61h10l13.7-41.1l13.7,41.1h10l21.2-61h-12.5L469.5,413.5z
+                   M518.1,406h22.4v-11.2h-22.4v-12.5h33.6v-11.2h-46.1v62.3h46.1v-12.5h-33.6V406z M566.6,432.1h12.5v-61h-12.5V432.1z M361.2,419.7
+                  l-5,13.7h-12.5l27.4-61h10l27.4,61h-13.7l-5-12.5h-28.6V419.7z M366.1,408.5h18.7l-10-22.4L366.1,408.5z"
+                      class=st1appgalery />
+                    <path d="M396,292.7c-43.6,0-78.5-34.9-78.5-78.5h11.2c0,37.4,29.9,67.3,67.3,67.3s67.3-29.9,67.3-67.3h11.2
+                  C474.5,257.8,439.6,292.7,396,292.7z" class=st1appgalery />
+                  </g>
+                </svg>
+
+              </a>
+            </div>
+          </div>
+          <hr class="marg-neg-lateral d-lg-none" />
+          <div class="social-bottom-menu d-lg-none d-flex align-items-center">
+            <span class="title-section">
+              Síguenos
+            </span>
+            <span class="social-list d-flex">
+              <a class="d-flex" href="#" target="_blank" aria-label="Facebook Excélsior" rel="nofollow"
+                style="width:25px; height: 25px;">
+
+                <svg id="facebook-logo-in-circular-button-outlined-social-symbol" xmlns="http://www.w3.org/2000/svg"
+                  width="24" height="24" viewBox="0 0 24 24">
+                  <g id="Grupo_4613" data-name="Grupo 4613">
+                    <path id="Trazado_787" data-name="Trazado 787" d="M24,12A12,12,0,1,0,12,24,12,12,0,0,0,24,12Z"
+                      fill="#385194" />
+                    <path id="Trazado_788" data-name="Trazado 788"
+                      d="M227.241,144.426v-7.295h2.12l.335-2.417h-2.455V133.5c0-.631.182-1.233.98-1.233h1.594v-2.413h-2.263c-1.9,0-2.421,1.422-2.421,3.394v1.463h-1.305v2.419h1.305v7.295Z"
+                      transform="translate(-214.813 -125.133)" fill="#fff" />
+                  </g>
+                </svg>
+              </a>
+              <a class="d-flex" href="#" target="_blank" aria-label="X Excélsior" rel="nofollow"
+                style="width:25px; height: 25px;">
+                <svg version="1.1" id="twitter-circular-button" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
+                  style="enable-background:new 0 0 24 24;" xml:space="preserve">
+
+                  <g>
+                    <circle cx="12" cy="12" r="12" />
+                    <g id="layer1" transform="translate(52.390088,-25.058597)">
+                      <path id="path1009" class="st0t" d="M-47.8,30.1l5.7,7.7l-5.8,6.2h1.3l5.1-5.5l4.1,5.5h4.4l-6.1-8.1l5.4-5.8h-1.3l-4.7,5l-3.8-5
+                        H-47.8z M-45.9,31.1h2l9,12h-2L-45.9,31.1z" />
+                    </g>
+                  </g>
+                </svg>
+              </a>
+              <a class="d-flex" aria-label="Instagram Excélsior" target="_blank" href="#" rel="nofollow"
+                style="width:25px; height: 25px;">
+
+                <svg id="pinterest-social-visual-website-logotype" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                  <defs>
+                    <linearGradient id="linear-gradient" x1="0.5" y1="0.008" x2="0.5" y2="0.998"
+                      gradientUnits="objectBoundingBox">
+                      <stop offset="0" stop-color="#ffba5b" />
+                      <stop offset="0.3" stop-color="#c74c4d" />
+                      <stop offset="0.6" stop-color="#c21975" />
+                      <stop offset="1" stop-color="#7024c4" />
+                    </linearGradient>
+                  </defs>
+                  <g id="Grupo_4615" data-name="Grupo 4615">
+                    <path id="Trazado_792" data-name="Trazado 792" d="M24,12A12,12,0,1,0,12,24,12,12,0,0,0,24,12Z"
+                      fill="url(#linear-gradient)" />
+                    <g id="instagram_1_" data-name="instagram (1)" transform="translate(5.241 5.241)">
+                      <g id="Grupo_4617" data-name="Grupo 4617">
+                        <g id="Grupo_4616" data-name="Grupo 4616">
+                          <path id="Trazado_793" data-name="Trazado 793"
+                            d="M9.2,0H4.183A4.183,4.183,0,0,0,0,4.183V9.2a4.183,4.183,0,0,0,4.183,4.183H9.2A4.183,4.183,0,0,0,13.385,9.2V4.183A4.183,4.183,0,0,0,9.2,0ZM12.13,9.2A2.931,2.931,0,0,1,9.2,12.13H4.183A2.931,2.931,0,0,1,1.255,9.2V4.183A2.931,2.931,0,0,1,4.183,1.255H9.2A2.931,2.931,0,0,1,12.13,4.183Z"
+                            fill="#fff" />
+                        </g>
+                      </g>
+                      <g id="Grupo_4619" data-name="Grupo 4619" transform="translate(3.346 3.346)">
+                        <g id="Grupo_4618" data-name="Grupo 4618">
+                          <path id="Trazado_794" data-name="Trazado 794"
+                            d="M131.346,128a3.346,3.346,0,1,0,3.346,3.346A3.346,3.346,0,0,0,131.346,128Zm0,5.438a2.091,2.091,0,1,1,2.091-2.091A2.094,2.094,0,0,1,131.346,133.438Z"
+                            transform="translate(-128 -128)" fill="#fff" />
+                        </g>
+                      </g>
+                      <g id="Grupo_4621" data-name="Grupo 4621" transform="translate(9.844 2.649)">
+                        <g id="Grupo_4620" data-name="Grupo 4620">
+                          <ellipse id="Elipse_35" data-name="Elipse 35" cx="0.446" cy="0.446" rx="0.446" ry="0.446"
+                            fill="#fff" />
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+              <a class="d-flex" aria-label="YouTube Excélsior" target="_blank" href="#" rel="nofollow"
+                style="width:25px; height: 25px;">
+
+                <svg id="pinterest-social-visual-website-logotype" xmlns="http://www.w3.org/2000/svg" width="24"
+                  height="24" viewBox="0 0 24 24">
+                  <g id="Grupo_4615" data-name="Grupo 4615">
+                    <path id="Trazado_792" data-name="Trazado 792" d="M24,12A12,12,0,1,0,12,24,12,12,0,0,0,24,12Z"
+                      fill="#d40c16" />
+                    <g id="youtube" transform="translate(5.673 7.493)">
+                      <g id="Grupo_4622" data-name="Grupo 4622">
+                        <path id="Trazado_795" data-name="Trazado 795"
+                          d="M12.5,80.865c-.354-.63-.738-.746-1.52-.79S8.23,80,6.527,80s-3.672.022-4.452.074-1.166.16-1.523.79A7.7,7.7,0,0,0,0,84.484v.007A7.67,7.67,0,0,0,.552,88.1c.357.63.741.744,1.522.8s2.747.073,4.453.073,3.667-.027,4.45-.072,1.166-.167,1.52-.8a7.622,7.622,0,0,0,.554-3.613v-.007A7.638,7.638,0,0,0,12.5,80.865Zm-7.6,6.069V82.039l4.079,2.447Z"
+                          transform="translate(0 -80)" fill="#fff" />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+              <a class="d-flex" aria-label="Flipboard Excélsior" target="_blank" href="#" rel="nofollow"
+                style="width:25px; height: 25px;">
+
+
+                <svg id="pinterest-social-visual-website-logotype" xmlns="http://www.w3.org/2000/svg" width="24"
+                  height="24" viewBox="0 0 24 24">
+                  <g id="Grupo_4615" data-name="Grupo 4615">
+                    <path id="Trazado_792" data-name="Trazado 792" d="M24,12A12,12,0,1,0,12,24,12,12,0,0,0,24,12Z"
+                      fill="#d40c16" />
+                    <path id="Trazado_796" data-name="Trazado 796"
+                      d="M7.545,17.049v-9.3L16.969,7.7v3.04H13.853v3.192H10.509v3.116Z"
+                      transform="translate(-0.034 -0.053)" fill="#fff" />
+                  </g>
+                </svg>
+              </a>
+            </span>
+
+          </div>
+
+          <div class="links-bottoms d-flex align-items-center justify-content-center">
+            <a href="#" target="_blank">Términos y condiciones de uso</a><span class="d-none d-lg-block pipe">|</span>
+            <a href="#" target="_blank">Aviso de privacidad</a><span class="d-none d-lg-block pipe">|</span>
+            <a href="#" target="_blank">Política ambiental</a><span class="d-none d-lg-block pipe">|</span>
+            <a href="#" target="_blank">Empresa Socialmente Responsable</a><span class="d-none d-lg-block pipe">|</span>
+            <a href="#" target="_blank">Declaración de
+              Accesibilidad</a><span class="d-none d-lg-block pipe">|</span>
+            <a href="#" target="_blank">Configuración de Cookies</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <header>
+    <div id="headerDesktop" class="top-container container-md d-none d-lg-block">
+      <div class="row-logo-desktop d-flex align-items-center">
+        <div id="react-home-financial-indicators" class="dollar-side"></div>
+        <a href="#" target="_blank" style="width: 370px; height: 42px;" aria-label="Acceso a página de Inicio">
+
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+            viewBox="0 0 162 21.3" aria-label="[Excélsior Logo]">
+            <defs>
+
+              <clipPath id="clippath">
+                <rect class="cls-1" x="-.4" y=".7" width="150.5" height="24.8" />
+              </clipPath>
+              <clipPath id="clippath-1">
+                <rect class="cls-1" x="-.4" y=".7" width="150.5" height="24.8" />
+              </clipPath>
+              <clipPath id="clippath-2">
+                <rect class="cls-1" x="-.4" y=".7" width="150.5" height="24.8" />
+              </clipPath>
+              <linearGradient id="linear-gradient" x1="152.6" y1="3.8" x2="159.3" y2="3.8"
+                gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#000" />
+                <stop offset=".1" stop-color="#2c2c2c" />
+                <stop offset=".2" stop-color="#464646" />
+                <stop offset=".3" stop-color="#2e2e2e" />
+                <stop offset=".4" stop-color="#202020" />
+                <stop offset=".4" stop-color="#1b1b1b" />
+                <stop offset=".7" stop-color="#464646" />
+                <stop offset=".8" stop-color="#252525" />
+                <stop offset=".9" stop-color="#0a0a0a" />
+                <stop offset="1" stop-color="#000" />
+              </linearGradient>
+              <linearGradient id="linear-gradient-2" x1="152.6" y1="2.7" x2="159.3" y2="2.7"
+                gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#343434" />
+                <stop offset="1" stop-color="#9c9c9c" />
+              </linearGradient>
+              <linearGradient id="linear-gradient-3" x1="148.6" y1="15.5" x2="164.9" y2="4.6"
+                gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#464646" />
+                <stop offset=".2" stop-color="#000" />
+                <stop offset=".3" stop-color="#464646" />
+                <stop offset=".3" stop-color="#3d3d3d" />
+                <stop offset=".3" stop-color="#262626" />
+                <stop offset=".4" stop-color="#151515" />
+                <stop offset=".4" stop-color="#090909" />
+                <stop offset=".4" stop-color="#010101" />
+                <stop offset=".5" stop-color="#000" />
+                <stop offset=".5" stop-color="#0a0a0a" />
+                <stop offset=".5" stop-color="#242424" />
+                <stop offset=".6" stop-color="#373737" />
+                <stop offset=".6" stop-color="#424242" />
+                <stop offset=".6" stop-color="#464646" />
+                <stop offset=".6" stop-color="#363636" />
+                <stop offset=".7" stop-color="#272727" />
+                <stop offset=".7" stop-color="#1d1d1d" />
+                <stop offset=".7" stop-color="#1b1b1b" />
+                <stop offset=".7" stop-color="#1f1f1f" />
+                <stop offset=".8" stop-color="#343434" />
+                <stop offset=".8" stop-color="#414141" />
+                <stop offset=".8" stop-color="#464646" />
+                <stop offset=".8" stop-color="#393939" />
+                <stop offset=".9" stop-color="#202020" />
+                <stop offset=".9" stop-color="#0e0e0e" />
+                <stop offset=".9" stop-color="#030303" />
+                <stop offset="1" stop-color="#000" />
+              </linearGradient>
+              <linearGradient id="linear-gradient-4" x1="150.2" y1="11.1" x2="159" y2="11.1"
+                xlink:href="#linear-gradient-2" />
+              <linearGradient id="linear-gradient-5" x1="150.1" y1="5.3" x2="164.1" y2="17.6"
+                gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#000" />
+                <stop offset=".1" stop-color="#464646" />
+                <stop offset=".1" stop-color="#454545" />
+                <stop offset=".2" stop-color="#272727" />
+                <stop offset=".2" stop-color="#111" />
+                <stop offset=".3" stop-color="#040404" />
+                <stop offset=".3" stop-color="#000" />
+                <stop offset=".4" stop-color="#464646" />
+                <stop offset=".5" stop-color="#333" />
+                <stop offset=".6" stop-color="#1b1b1b" />
+                <stop offset=".6" stop-color="#131313" />
+                <stop offset=".7" stop-color="#2a2a2a" />
+                <stop offset=".7" stop-color="#464646" />
+                <stop offset="1" stop-color="#000" />
+              </linearGradient>
+              <linearGradient id="linear-gradient-6" x1="153" y1="11.1" x2="161.8" y2="11.1"
+                gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#9c9c9c" />
+                <stop offset="1" stop-color="#343434" />
+              </linearGradient>
+            </defs>
+            <g>
+              <g id="Capa_1">
+                <g>
+                  <g class="cls-12">
+                    <path class="cls-9"
+                      d="M27.6,10.3l6.2-9.2h-5.9l-3.7,5.9-3.7-5.9h-5.8l6.2,9.3-6.7,9.8h5.9l4.2-6.4,4.2,6.4h5.8l-6.7-9.9ZM38.8,10.6c0-3.1,2.2-5.5,5.2-5.5s3.6,1.3,4.2,2.8l4.2-2c-1.3-2.5-3.7-5.1-8.5-5.1s-10.1,4-10.1,9.9,4.5,9.9,10.1,9.9,7.2-2.7,8.5-5.1l-4.2-2c-.7,1.5-2.2,2.8-4.2,2.8-3-.2-5.2-2.6-5.2-5.7M71.3,20h12.5v-4.3h-7.6V1h-4.9v19ZM90.6,6.4c0-.8.7-1.5,2.2-1.5s3.8.7,5.4,2l2.7-3.5c-2-1.8-4.6-2.7-7.7-2.7-4.8,0-7.6,2.8-7.6,5.9,0,4.6,4.4,5.3,7.5,5.9,2,.5,3.3.8,3.3,2s-1,1.6-2.7,1.6c-2.6,0-4.7-1.1-6-2.5l-2.6,3.7c2,1.9,4.6,3.1,8.5,3.1s7.9-2.5,7.9-6.3-4.4-5.2-7.4-5.9c-2.1-.4-3.3-.7-3.3-1.8M103.7,20h4.9V1h-4.9v19ZM126.4,10.6c0,3.1-2,5.5-5.2,5.5s-5.2-2.4-5.2-5.5,2-5.5,5.2-5.5c3.2,0,5.2,2.3,5.2,5.5M131.4,10.6c0-5.8-4.4-9.9-10.1-9.9s-10.2,4.1-10.2,9.9,4.4,9.9,10.2,9.9,10.1-4.1,10.1-9.9M145,7.3c0,1.3-1.1,2.1-2.3,2.1h-3.9v-4.3h3.9c1.3,0,2.3.8,2.3,2.1M150,7.4c0-3.5-2.4-6.3-6.6-6.3h-9.6v19h4.9v-6.4h2.5l3.2,6.4h5.6l-3.9-7c1.9-.7,3.9-2.5,3.9-5.8" />
+                  </g>
+                  <g class="cls-10">
+                    <path class="cls-9"
+                      d="M-.4,20h13.9v-4.2H4.5v-4.5c.2,0,.6,0,.7,0,.7,0,1.4.2,1.8.5.5.3,1,.4,1.9.4,1.4,0,2-.8,2.6-2.4h0c0,0-.4-.4-.4-.4h0c-.2.2-.5.5-1.2.5s-.9-.2-1.3-.4c-.4-.2-.9-.5-1.9-.5s-1.6,0-2.1.5v-4.3h9V1H-.4v19Z" />
+                  </g>
+                  <g class="cls-11">
+                    <path class="cls-9"
+                      d="M54.6,20h13.9v-4.2h-9v-4.5c.2,0,.6,0,.7,0,.7,0,1.4.2,1.8.5.5.3,1,.4,1.9.4,1.4,0,2-.8,2.6-2.4h0c0,0-.4-.4-.4-.4h0c-.2.2-.5.5-1.2.5s-.9-.2-1.3-.4c-.5-.3-1-.5-2-.5s-1.7,0-2.2.5v-4.3h9V1h-13.9v19h.2Z" />
+                  </g>
+                </g>
+                <g>
+                  <path class="cls-7-"
+                    d="M159.3,4.4c0-1.4-.3-2.2-.6-2.5-.5-.6-1.7-1-2.8-1s-2.2.4-2.8,1c-.3.3-.5,1.1-.6,2.5,0,1.4.9,2.4.9,2.4,0,0-.4-2.9,2.4-2.9s2.4,2.9,2.4,2.9c0,0,1-1,.9-2.4Z" />
+                  <g>
+                    <path class="cls-6-"
+                      d="M152.6,4.5c0-1.4.3-2.2.6-2.5.5-.6,1.7-1,2.8-1s2.2.4,2.8,1c.3.3.5,1.1.6,2.5,0,0,0,0,0,.1,0,0,0-.1,0-.2,0-1.4-.3-2.2-.6-2.5-.5-.6-1.7-1-2.8-1s-2.2.4-2.8,1c-.3.3-.5,1.1-.6,2.5,0,0,0,.1,0,.2,0,0,0,0,0-.1Z" />
+                    <path class="cls-8-" d="M158.4,6.5c0,.2,0,.3,0,.3,0,0,0,0,0,0,0,0,0-.2,0-.3Z" />
+                    <path class="cls-8-" d="M153.5,6.8s0,0,0,0c0,0,0-.1,0-.3,0,.1,0,.3,0,.3Z" />
+                  </g>
+                  <path class="cls-5-"
+                    d="M156.4,7.7c-2.5,3.9-4.8,6.9-6.3,8.6l1.5,4c.3-.5,6.6-9.3,7.8-11.8,1-2.3.5-5.2-.7-6.6.2.4.8.8-2.3,5.8Z" />
+                  <path class="cls-4-"
+                    d="M150.2,16.3c1.5-1.7,3.8-4.7,6.3-8.6,2.8-4.4,2.6-5.3,2.4-5.7,0,0,0,0-.1-.1.2.4.8.8-2.3,5.8-2.5,3.9-4.8,6.9-6.3,8.6l1.5,4s0,0,0,0l-1.5-4Z" />
+                  <path class="cls-2-"
+                    d="M161.8,16.3c-1.5-1.7-3.8-4.7-6.3-8.6-3.1-5-2.5-5.4-2.3-5.8-1.2,1.4-1.8,4.3-.7,6.6,1.2,2.5,7.5,11.4,7.8,11.8l1.5-4Z" />
+                  <path class="cls-3-"
+                    d="M155.5,7.7c-3.1-5-2.5-5.4-2.3-5.8,0,0,0,0,0,0-.2.4-.8.8,2.3,5.8,2.5,3.9,4.8,6.9,6.3,8.6l-1.5,4s0,0,0,0l1.5-4c-1.5-1.7-3.8-4.7-6.3-8.6Z" />
+                </g>
+              </g>
+            </g>
+          </svg>
+
+        </a>
+        <span class="content-text">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </span>
+      </div>
+      <nav id="first-nav" class="first-nav">
+        <div id="block-menu-menu-menu-top--2" class="block block-menu">
+
+
+          <div class="content">
+            <ul class="menu">
+              <li class="first leaf"><a href="#" title="Página principal de Excélsior" target="_blank">Portada</a></li>
+              <li class="leaf"><a href="#" title="Acceso al impreso del periódico y al histórico"
+                  target="_blank">Impreso</a>
+              </li>
+              <li class="leaf"><a href="#" title="Imagen Multicast TV" target="_blank">Tv</a></li>
+              <li class="leaf"><a href="#" title="Imagen Radio" target="_blank">Radio</a></li>
+              <li class="leaf"><a href="#" title="Imagen Tv en Vivo" target="_blank">Imagen Tv</a></li>
+              <li class="last leaf"><a href="#" title="Última hora de noticias" target="_blank">Última hora</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <nav class="second-nav">
+        <div id="block-system-main-menu" class="block block-system block-menu">
+
+
+          <div class="content">
+            <ul class="menu">
+              <li class="first expanded"><a href="#" title="Contenido de Nacional" target="_blank">Nacional<span
+                    class="view-more-item fa fa-close inline-block"></span></a>
+                <ul class="menu">
+                  <li class="first leaf"><a href="#" title="Contenido de Seguridad" target="_blank">Seguridad</a></li>
+                  <li class="leaf"><a href="#" title="Estados" target="_blank">Estados</a></li>
+                  <li class="leaf"><a href="#" title="Política" target="_blank">Política</a></li>
+                  <li class="last leaf"><a href="#" title="Sociedad" target="_blank">Sociedad</a></li>
+                </ul>
+              </li>
+              <li class="expanded"><a href="#" title="Contenido de Global" target="_blank">Global<span
+                    class="view-more-item fa fa-close inline-block"></span></a>
+                <ul class="menu">
+                  <li class="first leaf"><a href="#" title="Estados Unidos" target="_blank">Estados Unidos</a></li>
+                  <li class="leaf"><a href="#" title="Latinoamérica" target="_blank">Latinoamérica</a></li>
+                  <li class="leaf"><a href="#" title="Europa" target="_blank">Europa</a></li>
+                  <li class="last leaf"><a href="#" title="Medio Oriente" target="_blank">Medio Oriente</a></li>
+                </ul>
+              </li>
+              <li class="leaf"><a href="#" title="Dinero en Imagen" target="_blank">Dinero</a></li>
+              <li class="expanded"><a href="#" title="Contenido de Comunidad" target="_blank">Comunidad<span
+                    class="view-more-item fa fa-close inline-block"></span></a>
+                <ul class="menu">
+                  <li class="first leaf"><a href="#" title="Coronavirus" target="_blank">Coronavirus</a></li>
+                  <li class="leaf"><a href="#" title="Violencia de género" target="_blank">Violencia de género</a>
+                  </li>
+                  <li class="leaf"><a href="#" title="Seguridad" target="_blank">Seguridad</a></li>
+                  <li class="leaf"><a href="#" title="Alerta Amber" target="_blank">Alerta Amber</a></li>
+                  <li class="last leaf"><a href="#" title="Trámites" target="_blank">Trámites</a></li>
+                </ul>
+              </li>
+              <li class="expanded"><a href="#" title="Contenido de Deportes" target="_blank">Deportes<span
+                    class="view-more-item fa fa-close inline-block"></span></a>
+                <ul class="menu">
+                  <li class="first leaf"><a href="#" title="Liga Mx" target="_blank">Liga MX</a></li>
+                  <li class="leaf"><a href="#" title="Contenido de la Selección Nacional de México"
+                      target="_blank">Selección Mexicana</a></li>
+                  <li class="leaf"><a href="#" title="Futbol Internacional" target="_blank">Futbol
+                      Internacional</a></li>
+                  <li class="leaf"><a href="#" title="Champions League" target="_blank">Champions League</a>
+                  </li>
+                  <li class="leaf"><a href="#" title="NFL" target="_blank">NFL</a></li>
+                  <li class="leaf"><a href="#" title="Fórmula 1" target="_blank">Fórmula uno</a></li>
+                  <li class="leaf"><a href="#" title="" target="_blank">Box</a></li>
+                  <li class="leaf"><a href="#" title="Beisbol" target="_blank">Beisbol</a></li>
+                  <li class="leaf"><a href="#" title="Tenis" target="_blank">Tenis</a></li>
+                  <li class="last leaf"><a href="#" title="Más Deportes" target="_blank">Más Deportes</a></li>
+                </ul>
+              </li>
+              <li class="expanded"><a href="#" title="Canal de Espectáculos" target="_blank">Espectáculos<span
+                    class="view-more-item fa fa-close inline-block"></span></a>
+                <ul class="menu">
+                  <li class="first leaf"><a href="#" title="Premios Oscar" target="_blank">Premios Oscar</a></li>
+                  <li class="leaf"><a href="#" title="De Primera Mano" target="_blank">De Primera Mano</a></li>
+                  <li class="leaf"><a href="#" title="Series" target="_blank">Series</a></li>
+                  <li class="leaf"><a href="#" title="Música" target="_blank">Música</a></li>
+                  <li class="leaf"><a href="#" title="Actrices y modelos" target="_blank">Actrices y modelos</a></li>
+                  <li class="leaf"><a href="#" title="Televisión" target="_blank">Televisión</a></li>
+                  <li class="last leaf"><a href="#" title="Cine" target="_blank">Cine</a></li>
+                </ul>
+              </li>
+              <li class="leaf"><a href="#" title="Hacker" target="_blank">Hacker</a></li>
+              <li class="leaf"><a href="#" title="Expresiones" target="_blank">Expresiones</a></li>
+              <li class="leaf"><a href="#" title="Contenido de Opnión" target="_blank">Opinión</a></li>
+              <li class="leaf"><a href="#" title="Trending" target="_blank">Trending</a></li>
+              <li class="last leaf"><a href="#" title="Gentleman" target="_blank">Gentleman</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main class="container-md page-gral">
+    <div class="container-md">
+      <div class="region region-content-top">
+        <div id="block-excelsior-especiales-menu-especiales-wide" class="block block-excelsior-especiales">
+
+
+          <div class="content">
+          </div>
+        </div>
+      </div>
+      <div class="marg-neg-lat">
+        <div class="region region-content">
+          <div id="block-system-main" class="block block-system">
+
+
+            <div class="content">
+              <div class="header-node">
+                <span class="channel-funcion d-lg-none">Función</span>
+                <h1 class="title"> Susana Alexander: “Esto se terminó” </h1>
+                <h2 class="teaser">La actriz de 81 años dijo adiós al teatro con la obra Dios, ¿sigues ahí? el 29 de
+                  abril en el Teatro Xola</h2>
+                <div class="autoria-block row no-gutters">
+                  <div class="col-12 col-md-6 d-flex align-items-center">
+                    <small class="text-muted bottom-text">
+                      <span class="author-name">Nancy Méndez</span> <span class="hour">| 05:27 hrs.</span>
+                    </small>
+                  </div>
+                  <div class="col-12 col-md-6">
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-big-left">
+                <!-- Luna Player -->
+
+                <article class="node-content">
+                  <figure class="main-image">
+                    <picture>
+                      <img loading="eager" fetchpriority="high"
+                        src="assets/woman.jpg"
+                        class="img-fluid" alt="Actriz Susana Alexander" width="830" height="623" />
+                    </picture>
+                    <figcaption class="d-none d-md-block">Alexander, de 81 años de edad, ofreció su última función
+                      teatral el 29 de abril pasado -la última función de su vida, según anticipó-, en el Teatro Xola,
+                      con la obra Dios, ¿sigues ahí?, al lado de Pilar Flores del Valle. Foto: Pável Jurado</figcaption>
+                  </figure>
+
+                  <div class="body-node" id="id-body-node" rol-nid="1714200">
+                    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+                      <div class="field-items">
+                        <div class="field-item even" property="content:encoded">
+                          <p></p>
+                          <p></p>
+                          <blockquote>
+                            <p>Y que me toquen <em>Las Golondrinas</em> porque esto se terminó. Muchas gracias por
+                              haberme acompañado tantos años. Gracias Dios por el milagro de su presencia”. Con estas
+                              palabras, la actriz Susana Alexander se despidió de su público a través de las redes
+                              sociales, acompañada de un video en el que, precisamente, sonó con mariachi este himno a
+                              la despedida, así como una ovación de los espectadores que pareció interminable.</p>
+                          </blockquote>
+                          <p>Alexander, de 81 años de edad, ofreció su última función teatral el 29 de abril pasado -la
+                            última función de su vida, según anticipó-, en el Teatro Xola, con la obra <em>Dios, ¿sigues
+                              ahí</em>?, al lado de Pilar Flores del Valle.</p>
+                          <div class="banner-content-ads"
+                            style="display: block; text-align: center; margin: 15px 15px;">
+                            <div id="video-dfp-remix-flow" data-ads="/35139216/Excelsior/Video_InRead_1"
+                              data-target="video-ads-custom">
+                              <div id="video-ads-custom"></div>
+                            </div>
+                          </div>
+                          <p>Acompañada por actores como Fernando Canek (hijo de Fernando Luján), Beto Castillo, Horacio
+                            Villalobos, Norma Lazareno, Jacqueline Andere, Sophie Alexander-Katz y Pedro Sicard, Susana
+                            Alexander dijo adiós a una extensa trayectoria de más de 70 años, en teatro, cine y
+                            televisión.</p>
+                          <blockquote>
+                            <p>Susana Alexander se ha despedido de su carrera como actriz en los escenarios. El pasado
+                              29 de abril ha cerrado el telón en el mismo espacio que pisó por primera vez hace 60 años,
+                              el Teatro Xola.</p>
+                          </blockquote>
+
+                          <p><a href="#" target="_blank"><strong>Aquí podrás
+                                acceder a noticias en tiempo real</strong></a></p>
+                          <p><strong>Conoce lo más viral en </strong><a href="#" target="_blank"><strong>Facebook
+                                Trending </strong></a></p>
+                          <p><strong>Lee a los columnistas de </strong><a href="#" target="_blank"><strong>Excélsior
+                                Opinión</strong></a></p>
+                          <p><strong>clm</strong></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+                <section id="te-puede-interesar" class="section-custom">
+                  <h3><span class="subtitle-block-node" style="margin: 10px;">Te recomendamos</span></h3>
+                  <ul class="row list-media-custom list-unstyled">
+
+
+                    <li class="col-12 col-md-4 item item-media small-card-media">
+
+                      <a href="#" target="_blank" class="media">
+                        <figure class="icon-type type-article">
+                          <img loading="lazy"
+                            src="assets/1.jpg"
+                            class="card-img img-fluid" alt="Foto: Tomada de Instagram" title="Foto: Tomada de Instagram"
+                            width="237" height="172" />
+                        </figure>
+                        <span class="media-body">
+                          <h3><span class="card-title"> Susana Alexander se despide de la actuación; esta será su ultima
+                              obra </span></h3>
+                        </span>
+                      </a>
+                    </li>
+
+
+                    <li class="col-12 col-md-4 item item-media small-card-media">
+
+                      <a href="#" target="_blank" class="media">
+                        <figure class="icon-type type-article">
+                          <img loading="lazy"
+                            src="assets/2.jpg"
+                            class="card-img img-fluid" alt="Susana Alexander y Ari Albarrán."
+                            title="Susana Alexander tiene su primer protagónico en Disney+ con la serie de comedia Mamá Cake. Fotos: Cortesía Disney+."
+                            width="237" height="172" />
+                        </figure>
+                        <span class="media-body">
+                          <h3><span class="card-title"> Susana Alexander se siente como princesa de Disney</span></h3>
+                        </span>
+                      </a>
+                    </li>
+
+
+                    <li class="col-12 col-md-4 item item-media small-card-media">
+
+                      <a href="#" target="_blank" class="media">
+                        <figure class="icon-type type-article">
+                          <img loading="lazy"
+                            src="assets/3.jpg"
+                            class="card-img img-fluid" alt="Fotografía: cortesía Manojo de Ideas"
+                            title="Susana Alexander prepara la viuda judía" width="237" height="172" />
+                        </figure>
+                        <span class="media-body">
+                          <h3><span class="card-title"> Susana Alexander prepara la viuda judía</span></h3>
+                        </span>
+                      </a>
+                    </li>
+
+
+                    <li class="col-12 col-md-4 item item-media small-card-media">
+
+                      <a href="#" target="_blank" class="media">
+                        <figure class="icon-type type-article">
+                          <img loading="lazy"
+                            src="assets/4.jpg"
+                            class="card-img img-fluid" alt="Soulfly: Todo se queda en familia"
+                            title="Soulfly: Todo se queda en familia" width="237" height="172" />
+                        </figure>
+                        <span class="media-body">
+                          <h3><span class="card-title"> Soulfly: Todo se queda en familia</span></h3>
+                        </span>
+                      </a>
+                    </li>
+
+
+                    <li class="col-12 col-md-4 item item-media small-card-media">
+
+                      <a href="#" target="_blank" class="media">
+                        <figure class="icon-type type-article">
+                          <img loading="lazy"
+                            src="assets/5.jpg"
+                            class="card-img img-fluid" alt="Risas y mucho flow" title="Risas y mucho flow" width="237"
+                            height="172" />
+                        </figure>
+                        <span class="media-body">
+                          <h3><span class="card-title"> Risas y mucho flow</span></h3>
+                        </span>
+                      </a>
+                    </li>
+
+
+                    <li class="col-12 col-md-4 item item-media small-card-media">
+
+                      <a href="#" target="_blank" class="media">
+                        <figure class="icon-type type-article">
+                          <img loading="lazy"
+                            src="assets/6.jpg"
+                            class="card-img img-fluid" alt="Thunderbolts: familia disfuncional"
+                            title="Thunderbolts: familia disfuncional" width="237" height="172" />
+                        </figure>
+                        <span class="media-body">
+                          <h3><span class="card-title"> Thunderbolts: familia disfuncional</span></h3>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </section>
+
+                <section class="tags section-custom">
+                  <h3><span class="subtitle-block-node">Tags</span></h3>
+                  <ul class="list-unstyled d-flex">
+                    <li class="item-tag">
+                      <a href="#" target="_blank" class="badge badge-secondary">Teatro</a>
+                    </li>
+                    <li class="item-tag">
+                      <a href="#" target="_blank" class="badge badge-secondary">Espectáculo</a>
+                    </li>
+                  </ul>
+                </section>
+                <section id="social-bottom-node" class="section-custom">
+                  <h3><span class="subtitle-block-node">Comparte en Redes Sociales</span></h3>
+                  <ul class="list-unstyled d-flex">
+                    <li class="item-social">
+                      <a href="#" class="d-flex" target="_blank" aria-label="Compartir notas en Facebook">
+                        <svg id="Facebook" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                          viewBox="0 0 32 32">
+                          <circle id="Elipse_600" data-name="Elipse 600" cx="16" cy="16" r="16" fill="#e6e6e6" />
+                          <g id="Grupo_23716" data-name="Grupo 23716" transform="translate(6.231 6.231)">
+                            <path id="Trazado_26167" data-name="Trazado 26167"
+                              d="M87.083,77.351a9.792,9.792,0,1,0-11.322,9.732V80.2H73.275V77.351h2.486v-2.17a3.466,3.466,0,0,1,3.7-3.833,14.966,14.966,0,0,1,2.192.192v2.424H80.417a1.42,1.42,0,0,0-1.6,1.538v1.848h2.716L81.1,80.2H78.822v6.884A9.836,9.836,0,0,0,87.083,77.351Z"
+                              transform="translate(-67.5 -67.5)" fill="#3b5998" />
+                            <path id="Trazado_26168" data-name="Trazado 26168"
+                              d="M182.974,147.586l.434-2.83h-2.716v-1.837a1.415,1.415,0,0,1,1.6-1.529h1.235v-2.41a15.055,15.055,0,0,0-2.192-.191,3.455,3.455,0,0,0-3.7,3.81v2.157h-2.486v2.83h2.486v6.842a9.9,9.9,0,0,0,3.06,0v-6.842Z"
+                              transform="translate(-169.371 -134.964)" fill="#fff" />
+                          </g>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="item-social">
+                      <a class="d-flex" href="#" target="_blank" aria-label="Compartir notas en Xs">
+                        <span
+                          style="background: #e6e6e6;border-radius: 50%; padding: 5px; display: flex; justify-content: center; align-items: center;">
+                          <svg version="1.1" id="twitter-circular-button" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
+                            style="enable-background:new 0 0 24 24;" xml:space="preserve" width="24" height="24">
+
+                            <g>
+                              <circle cx="12" cy="12" r="12" />
+                              <g id="layer1" transform="translate(52.390088,-25.058597)">
+                                <path id="path1009" class="st-buttom-x-red-0" d="M-47.8,30.1l5.7,7.7l-5.8,6.2h1.3l5.1-5.5l4.1,5.5h4.4l-6.1-8.1l5.4-5.8h-1.3l-4.7,5l-3.8-5
+                            H-47.8z M-45.9,31.1h2l9,12h-2L-45.9,31.1z" />
+                              </g>
+                            </g>
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="item-social">
+                      <a href="#" class="d-flex" target="_blank" aria-label="Compartir notas en WhatsApp">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                          <g id="Whats" transform="translate(0.006)">
+                            <circle id="Elipse_602" data-name="Elipse 602" cx="16" cy="16" r="16"
+                              transform="translate(-0.006)" fill="#e6e6e6" />
+                            <g id="Grupo_23717" data-name="Grupo 23717" transform="translate(7.119 6.231)">
+                              <path id="Trazado_23770" data-name="Trazado 23770"
+                                d="M10.58.011A9.317,9.317,0,0,0,1.69,9.3a9.17,9.17,0,0,0,1.017,4.182l-.992,4.778a.362.362,0,0,0,.44.424l4.72-1.109a9.365,9.365,0,0,0,13.5-8.006A9.311,9.311,0,0,0,10.58.011ZM16.211,14.4a7.369,7.369,0,0,1-8.432,1.369l-.657-.325-2.894.68L4.837,13.2l-.324-.629A7.22,7.22,0,0,1,5.862,4.138a7.361,7.361,0,0,1,10.35,0,7.218,7.218,0,0,1,0,10.266Z"
+                                transform="translate(-1.69 0)" fill="#fff" />
+                              <g id="Grupo_23718" data-name="Grupo 23718" transform="translate(1.545 1.533)">
+                                <path id="Trazado_23770-2" data-name="Trazado 23770"
+                                  d="M16.731,14.92a7.848,7.848,0,0,1-8.98,1.458l-.7-.346-3.082.724.649-3.124-.345-.67A7.689,7.689,0,0,1,5.709,3.986a7.839,7.839,0,0,1,11.022,0,7.687,7.687,0,0,1,0,10.933Z"
+                                  transform="translate(-3.426 -1.722)" fill="#7ad06d" />
+                                <path id="Trazado_23771" data-name="Trazado 23771"
+                                  d="M114.427,114.318l-1.928-.549a.723.723,0,0,0-.711.186l-.471.477a.707.707,0,0,1-.764.16,10.267,10.267,0,0,1-3.321-2.9.692.692,0,0,1,.056-.772l.412-.528a.708.708,0,0,0,.089-.724l-.811-1.82a.722.722,0,0,0-1.123-.255,3.215,3.215,0,0,0-1.254,1.9c-.137,1.34.442,3.029,2.633,5.057,2.531,2.343,4.558,2.653,5.877,2.336a3.235,3.235,0,0,0,1.724-1.491A.711.711,0,0,0,114.427,114.318Z"
+                                  transform="translate(-101.802 -104.444)" fill="#fff" />
+                              </g>
+                            </g>
+                          </g>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </section>
+
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div data-page="page.tpl"></div>
+    </div>
+  </main>
+  <footer id="footer">
+    <div class="container-md">
+      <div class="marg-neg-lateral">
+        <div class="first-row row">
+          <div class="col-12 text-center">
+            ESQUELAS, EDICTOS Y DESPLEGADOS / <b>Tel. 55 51 28 30 30</b> / <b>ventasexcelsior@gimm.com.mx</b>
+          </div>
+        </div>
+        <hr>
+        <div class="second-row row  text-center">
+          <div class="item col-6 col-lg-2 offset-lg-2">
+            <b>Policía</b><br>
+            Tel. 911<br>
+            ssp.df.gob.mx
+          </div>
+          <div class="item col-6 col-lg-2">
+            <b>Bomberos</b><br>
+            Tel. 911<br>
+          </div>
+          <div class="item col-6 col-lg-2">
+            <b>Locatel</b><br>
+            Tel. 55 5658 1111<br>
+            locatel.df.gob.mx
+          </div>
+          <div class="item col-6 col-lg-2">
+            <b>Cruz Roja</b><br>
+            Tel. 911<br>
+            <a target="_blank" href="#" rel="nofollow">
+              cruzrojamexicana
+            </a>
+          </div>
+        </div>
+        <hr>
+        <div class="third-row d-flex">
+          <div class="list">
+            <b>Secciones</b>
+            <div class="row">
+              <div class="secciones col-12">
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#" target="_blank" aria-label="Acceso a la lista de noticias de Nacional">Nacional</a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" aria-label="Acceso a la lista de noticias de Global">Global</a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank"
+                      aria-label="Acceso a la lista de noticias de Dinero en imagen">Dinero</a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" aria-label="Acceso a la lista de noticias de Comunidad">Comunidad</a>
+                  </li>
+                </ul>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#" target="_blank" aria-label="Acceso a la lista de noticias de Depoertes">Deportes</a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank"
+                      aria-label="Acceso a la lista de noticias de Espectáculos">Espectáculos</a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" aria-label="Acceso a la lista de noticias de Hacker">Hacker</a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" aria-label="Acceso a la lista de noticias de Hacker">Elecciones
+                      <script>document.write(new Date().getFullYear())</script>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank"
+                      aria-label="Acceso a la lista de noticias de Expresiones">Expresiones</a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank" aria-label="Acceso a la lista de noticias de Columnistas">Opinión</a>
+                  </li>
+
+                  <li>
+                    <a href="#" target="_blank" aria-label="Acceso a la lista de noticias de Trending">Trending</a>
+                  </li>
+                  <li>
+                    <a href="#" aria-label="Acceso a Gentleman" target="_blank" rel="nofollow">Gentleman</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="list d-none d-md-block">
+            <b>Especiales</b>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" target="_blank" aria-label="Acceso a contenido de Foro Excélsior">Foro
+                  Excélsior</a>
+              </li>
+              <li>
+                <a href="#" target="_blank" aria-label="Acceso a Crisis Ambiental">Crisis Ambiental</a>
+              </li>
+              <li>
+                <a href="#" target="_blank" aria-label="Acceso a Franja de Gaza">Franja de Gaza</a>
+              </li>
+              <li>
+                <a href="#" target="_blank" aria-label="Acceso a Metro CDMX">Metro
+                  CDMX</a>
+              </li>
+              <li>
+                <a href="#" target="_blank" aria-label="Acceso a El Chapo">El Chapo</a>
+              </li>
+            </ul>
+            <br />
+          </div>
+          <div class="list d-none d-md-block">
+            <b>Más Excélsior</b>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" target="_blank" aria-label="Acceso a Blogs">Blogs</a>
+              </li>
+              <li>
+                <a href="#" target="_blank" aria-label="Acceso a Lo más Leido">Lo más leído</a>
+              </li>
+              <li>
+                <a href="#" target="_blank" aria-label="Acceso a Última hora">Última hora</a>
+              </li>
+            </ul>
+            <br />
+          </div>
+          <div class="list d-none d-md-block">
+            <b>Temas de interés</b>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" target="_blank" aria-label="Acceso a noticias de Redes sociales">Redes sociales</a>
+              </li>
+              <li>
+                <a href="#" target="_blank" aria-label="Acceso a noticias de Alcaldías">Alcaldías</a>
+              </li>
+              <li>
+                <a href="#" target="_blank" aria-label="Acceso a noticias de Cocina">Cocina</a>
+              </li>
+              <li>
+                <a href="#" target="_blank" aria-label="Acceso a noticias de Salud">Salud</a>
+              </li>
+              <li>
+                <a href="#" aria-label="Acceso a Gentleman" target="_blank">Gentleman</a>
+              </li>
+              <li>
+                <a href="#" target="_blank" aria-label="Acceso a noticias de Viajes">Viajes</a>
+              </li>
+              <li>
+                <a href="#" target="_blank" aria-label="Acceso a noticias de Utilidad">De Utilidad</a>
+              </li>
+              <li>
+                <a href="#" target="_blank" aria-label="Acceso a noticias de Apps">Apps</a>
+              </li>
+            </ul>
+          </div>
+          <div class="list d-none d-md-block">
+            <b>Servicios</b>
+            <ul class="list-unstyled">
+              <li>
+                <a target="_blank" href="#" aria-label="Acceso a Boletín" rel="nofollow">Boletín</a>
+              </li>
+              <li>
+                <a href="#" target="_blank" aria-label="Acceso a página de Anúnciate">Anúnciate</a>
+              </li>
+              <li>
+                <a href="#" target="_blank" aria-label="Acceso a página de Directorio">Directorio</a>
+              </li>
+              <li>
+                <a href="#" target="_blank" aria-label="Acceso a página de Suscripciones">Suscripciones</a>
+              </li>
+            </ul>
+            <br />
+
+          </div>
+        </div>
+        <hr>
+        <div class="fourth-row d-flex">
+          <a href="#" target="_blank" aria-label="Acceso a página de Términos y condiciones de uso">Términos y
+            condiciones de uso</a>
+          <span class="d-none d-md-block pipe">|</span>
+          <a href="#" target="_blank" aria-label="Acceso a página de Aviso de privacidad">Aviso de privacidad</a>
+          <span class="d-none d-md-block pipe">|</span>
+          <a href="#" target="_blank" aria-label="Acceso a página de Política ambiental">Política ambiental</a>
+          <span class="d-none d-md-block pipe">|</span>
+          <a href="#" target="_blank" aria-label="Acceso a página de Directorio">Directorio</a>
+          <span class="d-none d-md-block pipe">|</span>
+          <a href="#" target="_blank">Ir arriba</a>
+        </div>
+        <hr>
+        <div class="fifth-row d-flex align-items-center justify-content-center">
+          <a href="#" target="_blank" rel="nofollow">
+            <img loading="lazy" width="80px" height="37px" class="img-fluid"
+              src="assets/img-digital.svg" alt="Imagen Digital"
+              title="Imagen Digital" />
+          </a>
+          <span class="pipe">|</span>
+          <a href="#" target="_blank">
+            <img loading="lazy" width="120px" height="16px" class="img-fluid"
+              src="assets/LogoEx.1.0.0.svg" alt="Excélsior"
+              title="Excélsior" />
+          </a>
+          <span class="pipe d-none d-md-block">|</span>
+          <a href="#" target="_blank" class="d-none d-md-block" rel="nofollow">
+            <img loading="lazy" class="img-fluid"
+              src="assets/HC_Declaracion_Negro.png" alt="hearcolors"
+              width="236px" height="31px" title="hearcolors" />
+          </a>
+        </div>
+        <div class="sixth-row d-md-none text-center">
+          <hr>
+          <a href="#" target="_blank" rel="nofollow">
+            <img loading="lazy" class="img-fluid"
+              src="assets/HC_Declaracion_Negro.png" alt="hearcolors"
+              width="236px" height="31px" title="hearcolors" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="container-md">
+        <div class="row">
+          <div class="col-12 col-md-9 text d-flex align-items-center">
+            ©
+            <script>document.write(new Date().getFullYear())</script> Imagen Digital. Todos los derechos reservados.
+            Prohibida la reproducción total o parcial, incluyendo
+            cualquier medio electrónico*
+          </div>
+          <div class="col-12 col-md-3 logo-esr">
+
+            <svg version="1.1" width="144" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px" y="0px" viewBox="0 0 727.8 286.6" style="enable-background:new 0 0 727.8 286.6; "
+              xml:space="preserve">
+              <style type="text/css">
+                .st0 {
+                  fill: #FFFFFF;
+                }
+              </style>
+              <path class="st0" d="M281.5,119.5c0,99.5-103.1,145.9-146.2,153.4C37.7,289.7,1.6,242,1.6,242s0.8,15.2,37.7,32.1
+  c36.9,16.8,110.8,23.1,189.7-23.4c87.3-51.5,97-111.1,100.7-127.4c6.8-30.6-1.6-97.9-90.7-97.9c-89.1,0-128.4,55.4-128.4,55.4
+  s49-9.7,75.5,0L173.3,55C173.3,55,281.5,36.6,281.5,119.5" />
+              <path class="st0" d="M51.6,167.1c0-99.5,103.1-146,146.3-153.4C299.1-3.8,331.6,44.6,331.6,44.6s-0.8-15.2-37.7-32.1
+  C257-4.3,183.1-10.6,104.2,35.9C16.8,87.4,7.1,147.1,3.4,163.4C-3.5,194,5,261.3,94.1,261.3s128.4-55.4,128.4-55.4s-48.9,9.8-75.4,0
+  l12.8,25.7C159.9,231.6,51.6,250,51.6,167.1" />
+              <polygon class="st0" points="79.4,102.4 129.3,102.4 127.9,115.7 95.1,115.7 93.1,134.9 123.5,134.9 122.1,147.5 91.8,147.5
+  89.7,167 125.1,167 123.7,180.4 71.3,180.4 " />
+              <path class="st0" d="M127.9,176.2l6-12.9c7.1,2.5,12.8,4.2,20.4,4.2c6.2,0,15.3-1.5,15.3-9.4c0-12.1-33.5-10.6-33.5-33.7
+  c0-16.3,14.3-23.3,28.9-23.3c9.3,0,16.2,1.5,24.1,5.2l-6.2,12.1c-5.7-2.2-11.7-3.3-18-3.3c-5,0-11.9,1.1-11.9,7.3
+  c0,10.5,34.1,11.6,34.1,33.4c0,19.2-18,25.9-34.1,25.9C144.4,181.8,135.3,179.8,127.9,176.2" />
+              <path class="st0" d="M220.8,150.9c-1.9,0.2-3.7,0.3-5.6,0.3c-1.9,0-3.6-0.1-5.5-0.1l-3.1,29.2h-17.1l8.2-78h29.2
+  c14.1,0,26.7,6,26.7,21.1c0,10.9-5.2,18.8-15,23.5l19.5,29.8l-15.8,7.9L220.8,150.9z M218,139c10.4,0,17.9-3,17.9-14.3
+  c0-7.7-6-8.8-12.8-8.8h-9.7L211,139H218z" />
+              <polygon class="st0" points="377.5,68.1 404.2,68.1 403.4,75.3 385.9,75.3 384.8,85.6 401,85.6 400.3,92.3 384.1,92.3 383,102.7
+  401.9,102.7 401.2,109.9 373.2,109.9 " />
+              <path class="st0" d="M411.3,77.6h7.2l-0.4,4.1c2.4-1.7,6.7-5,10.5-5c4.2,0,5.8,1.4,6.2,4.8c2.4-1.7,7.2-4.8,10.8-4.8
+  c4.7,0,6.4,1.7,6.4,6.3c0,1-0.1,2.2-0.2,3.5l-2.5,23.3h-7.2l2.4-21.9c0.1-0.9,0.2-1.7,0.2-2.3c0-1.4-0.4-1.9-1.8-1.9
+  c-2,0-7,3.1-8.2,3.7l-2.4,22.4H425l2.4-21.9c0.1-1,0.2-1.8,0.2-2.4c0-1.4-0.4-1.8-1.8-1.8c-2,0-6.9,3.2-8.3,4l-2.4,22.1h-7.2
+  L411.3,77.6z" />
+              <path class="st0" d="M461.3,77.6h7.2l-0.4,3.1c2.1-1.6,5.8-3.5,9.1-3.5c5.5,0,8.2,3.2,8.2,10c0,10.2-4.7,23.1-17.6,23.1
+  c-1.1,0-1.9-0.1-2.8-0.2l-1.4,12.6h-7.2L461.3,77.6z M478.4,87.4c0-3.1-1.4-4.1-2.9-4.1c-2.4,0-5.7,1.8-7.8,3l-1.9,18.1
+  c0.9,0.2,1.5,0.3,2.5,0.3C475.9,104.7,478.4,93.6,478.4,87.4" />
+              <path class="st0" d="M493.3,77.6h7.2l-0.4,4.1c2.3-1.8,5.7-4.7,9.3-4.7c0.7,0,0.9,0,1.9,0.2l-1.3,7c-1-0.2-1.6-0.2-2.6-0.2
+  c-2.4,0-5.9,2.7-7.9,4.3l-2.4,21.7h-7.2L493.3,77.6z" />
+              <path class="st0"
+                d="M510.8,98.3c0-10.9,5.4-21.6,16.8-21.6c6.8,0,9.7,4,9.7,8.2c0,5.5-5,8-10,9.7l-9.1,3.1
+  c-0.1,0.4-0.1,0.8-0.1,1.1c0,3.8,0.9,5.7,3.2,5.7c2.5,0,6-1.4,9.8-3.4l2.5,5c-4.1,2.6-8.2,4.5-14,4.5
+  C512.3,110.6,510.8,104.2,510.8,98.3 M526.9,89c2.2-0.9,3.4-2.2,3.4-3.7c0-1.8-1.4-2.7-2.9-2.7c-4.7,0-7.5,4.1-8.6,9.5L526.9,89z" />
+              <path class="st0" d="M537.3,108.6l1.9-5.7c2.8,0.9,5.9,1.6,8.7,1.6c2.4,0,5.5-0.7,5.5-3.4c0-4.4-12.4-6.3-12.4-14.6
+  c0-7.1,5.4-9.4,11.6-9.4c3.4,0,7.7,0.8,9.6,1.8l-1.8,5.4c-2.7-0.8-5-1.4-7.7-1.4c-2.4,0-4.7,0.4-4.7,3c0,4.6,12.5,6.9,12.5,15.2
+  c0,8.1-7.8,9.5-13.1,9.5C544.3,110.5,540.4,110.1,537.3,108.6" />
+              <path class="st0" d="M564.8,100.4c0-12,8-23.1,20.4-23.1c2,0,5,0.2,7.1,0.6l-3.3,32h-7.3l0.5-4.8c-3.6,3.4-6.8,5.6-9.9,5.6
+  C566.8,110.6,564.8,106.5,564.8,100.4 M582.9,99.1l1.6-15.7c-0.2-0.1-0.6-0.1-1.1-0.1c-6.7,0-11.4,8.1-11.4,16.4
+  c0,2.4,0.6,4.5,2.3,4.5C576.7,104.1,581.1,100.6,582.9,99.1" />
+              <path class="st0" d="M369.8,166.7l3.2-6.9c3.8,1.4,6.8,2.2,10.9,2.2c3.3,0,8.2-0.8,8.2-5c0-6.5-17.9-5.7-17.9-18
+  c0-8.7,7.7-12.5,15.4-12.5c5,0,8.7,0.8,12.8,2.8l-3.3,6.5c-3.1-1.2-6.2-1.8-9.6-1.8c-2.7,0-6.4,0.6-6.4,3.9
+  c0,5.6,18.2,6.2,18.2,17.9c0,10.3-9.6,13.9-18.2,13.9C378.6,169.7,373.7,168.6,369.8,166.7" />
+              <path class="st0" d="M404.7,157.6c0-12.7,6.4-21.7,17-21.7c7.4,0,11,5.6,11,11.8c0,9-3.8,21.9-17,21.9
+  C408.7,169.6,404.7,164.5,404.7,157.6 M425.4,148.1c0-4.8-1.9-6.3-5.2-6.3c-4.1,0-8.1,6.1-8.1,15.3c0,3.5,1.2,6.6,5,6.6
+  C421.1,163.6,425.4,157.9,425.4,148.1" />
+              <path class="st0" d="M436.1,157.9c0-11.9,6-22.1,17-22.1c3.8,0,6.8,1.5,8.3,2.8l-3.4,4.8c-1.6-1.1-3.1-1.8-5-1.8
+  c-7.4,0-9.4,9.6-9.4,15.2c0,4.1,1.1,6.4,2.6,6.4c2.7,0,4.8-0.6,9.7-3.1l2.4,5c-2.9,1.8-6.8,4.3-13,4.3
+  C438.5,169.6,436.1,164.7,436.1,157.9" />
+              <path class="st0"
+                d="M466.4,136.7h7.3l-3.4,32.2H463L466.4,136.7z M465.9,126.7l5.8-5.1l4.7,5.1l-5.8,5.1L465.9,126.7z" />
+              <path class="st0" d="M478.4,159.4c0-12,8-23.1,20.4-23.1c2,0,5,0.2,7.1,0.6l-3.3,32h-7.2l0.5-4.8c-3.6,3.4-6.8,5.6-9.9,5.6
+  C480.3,169.6,478.4,165.6,478.4,159.4 M496.5,158.1l1.6-15.7c-0.2-0.1-0.6-0.1-1.1-0.1c-6.7,0-11.4,8.1-11.4,16.4
+  c0,2.4,0.6,4.5,2.3,4.5C490.3,163.2,494.7,159.7,496.5,158.1" />
+              <polygon class="st0" points="515.7,124.3 523,124.3 518.3,168.9 511.1,168.9 " />
+              <path class="st0" d="M531.3,136.7h7.2l-0.4,4.1c2.4-1.7,6.7-5,10.5-5c4.2,0,5.8,1.4,6.2,4.8c2.4-1.7,7.2-4.8,10.8-4.8
+  c4.7,0,6.4,1.7,6.4,6.3c0,1-0.1,2.2-0.2,3.5l-2.5,23.3H562l2.4-21.9c0.1-0.9,0.2-1.7,0.2-2.3c0-1.4-0.4-1.9-1.8-1.9
+  c-2,0-7,3.1-8.2,3.7l-2.4,22.4H545l2.4-21.9c0.1-1,0.2-1.8,0.2-2.4c0-1.4-0.4-1.8-1.8-1.8c-2,0-6.9,3.2-8.3,4l-2.4,22.1h-7.2
+  L531.3,136.7z" />
+              <path class="st0" d="M577.1,157.4c0-10.9,5.4-21.6,16.8-21.6c6.8,0,9.7,4,9.7,8.2c0,5.5-5,8-10,9.7l-9.1,3.1
+  c-0.1,0.4-0.1,0.8-0.1,1.1c0,3.8,0.9,5.7,3.2,5.7c2.5,0,6-1.4,9.8-3.4l2.5,5c-4.1,2.6-8.3,4.5-14,4.5
+  C578.6,169.6,577.1,163.3,577.1,157.4 M593.2,148c2.2-0.9,3.4-2.2,3.4-3.7c0-1.8-1.4-2.7-2.9-2.7c-4.7,0-7.5,4.1-8.6,9.5L593.2,148z
+  " />
+              <path class="st0" d="M609.4,136.7h7.2l-0.4,4.2c2.4-1.7,7-5,11-5c4.8,0,6.4,1.7,6.4,6.4c0,1-0.1,2.1-0.2,3.4l-2.5,23.3h-7.3L626,147
+  c0.1-0.9,0.2-1.8,0.2-2.4c0-1.4-0.4-1.9-1.8-1.9c-2.2,0-7.5,3.2-8.9,4l-2.4,22.1H606L609.4,136.7z" />
+              <path class="st0" d="M640.9,162.6c0-0.8,0.1-1.8,0.2-2.8l1.9-17.5h-4.7l0.6-5.6h4.8l0.6-6.6h7.2l-0.7,6.6h8.9l-0.5,5.6h-9l-1.9,17.9
+  c-0.3,2.5,0.1,3.1,1.6,3.1c1.7,0,4.8-0.7,7.1-1.5l1.4,5.4c-2,1-5.9,2.4-10.1,2.4C643.7,169.6,640.9,168.4,640.9,162.6" />
+              <path class="st0"
+                d="M661.9,157.4c0-10.9,5.4-21.6,16.8-21.6c6.8,0,9.7,4,9.7,8.2c0,5.5-5,8-10,9.7l-9.1,3.1
+  c-0.1,0.4-0.1,0.8-0.1,1.1c0,3.8,0.9,5.7,3.2,5.7c2.5,0,5.9-1.4,9.8-3.4l2.5,5c-4.1,2.6-8.2,4.5-14,4.5
+  C663.4,169.6,661.9,163.3,661.9,157.4 M678,148c2.2-0.9,3.4-2.2,3.4-3.7c0-1.8-1.4-2.7-2.9-2.7c-4.7,0-7.5,4.1-8.6,9.5L678,148z" />
+              <path class="st0" d="M389.9,212.2c-1,0.1-2,0.2-3,0.2c-1,0-1.9-0.1-2.9-0.1l-1.6,15.6h-9.1l4.4-41.7h15.6c7.5,0,14.3,3.2,14.3,11.3
+  c0,5.8-2.8,10-8,12.6l10.4,15.9l-8.4,4.2L389.9,212.2z M388.4,205.8c5.5,0,9.5-1.6,9.5-7.7c0-4.1-3.2-4.7-6.8-4.7H386l-1.3,12.4
+  H388.4z" />
+              <path class="st0" d="M412.1,216.4c0-10.9,5.4-21.5,16.8-21.5c6.8,0,9.7,4,9.7,8.2c0,5.5-5,8-10,9.7l-9.1,3.1
+  c-0.1,0.4-0.1,0.8-0.1,1.1c0,3.8,0.9,5.7,3.2,5.7c2.5,0,5.9-1.4,9.8-3.4l2.5,5c-4.1,2.6-8.2,4.5-14,4.5
+  C413.6,228.7,412.1,222.3,412.1,216.4 M428.2,207.1c2.2-0.9,3.4-2.2,3.4-3.7c0-1.8-1.4-2.7-2.9-2.7c-4.7,0-7.5,4.1-8.6,9.5
+  L428.2,207.1z" />
+              <path class="st0" d="M438.6,226.7l1.9-5.7c2.8,0.9,5.9,1.6,8.7,1.6c2.4,0,5.5-0.7,5.5-3.4c0-4.4-12.4-6.3-12.4-14.6
+  c0-7.1,5.4-9.4,11.6-9.4c3.4,0,7.7,0.8,9.6,1.8l-1.8,5.4c-2.7-0.8-5-1.4-7.7-1.4c-2.4,0-4.7,0.4-4.7,3c0,4.6,12.5,6.9,12.5,15.2
+  c0,8.1-7.8,9.5-13.1,9.5C445.5,228.6,441.7,228.2,438.6,226.7" />
+              <path class="st0" d="M470.4,195.7h7.2l-0.4,3.1c2.1-1.6,5.8-3.5,9.1-3.5c5.5,0,8.2,3.2,8.2,10c0,10.2-4.7,23.1-17.6,23.1
+  c-1.1,0-1.9-0.1-2.8-0.2l-1.4,12.6h-7.2L470.4,195.7z M487.4,205.5c0-3.1-1.4-4.1-2.9-4.1c-2.4,0-5.7,1.8-7.8,3l-1.9,18.1
+  c0.9,0.2,1.5,0.3,2.5,0.3C485,222.8,487.4,211.7,487.4,205.5" />
+              <path class="st0" d="M498.1,216.6c0-12.7,6.4-21.7,17-21.7c7.4,0,11,5.6,11,11.8c0,9-3.8,21.9-17,21.9
+  C502.1,228.7,498.1,223.6,498.1,216.6 M518.8,207.1c0-4.8-1.9-6.3-5.2-6.3c-4.1,0-8.1,6.1-8.1,15.3c0,3.5,1.2,6.6,4.9,6.6
+  C514.5,222.7,518.8,217,518.8,207.1" />
+              <path class="st0" d="M533.8,195.7h7.2l-0.4,4.2c2.4-1.7,7-5,11-5c4.8,0,6.4,1.7,6.4,6.4c0,1-0.1,2.1-0.2,3.4l-2.5,23.3h-7.3
+  l2.4-21.9c0.1-1,0.2-1.8,0.2-2.4c0-1.4-0.4-1.9-1.8-1.9c-2.2,0-7.5,3.2-8.9,4l-2.4,22.1h-7.2L533.8,195.7z" />
+              <path class="st0" d="M561.7,226.7l1.9-5.7c2.8,0.9,5.9,1.6,8.7,1.6c2.4,0,5.5-0.7,5.5-3.4c0-4.4-12.4-6.3-12.4-14.6
+  c0-7.1,5.4-9.4,11.6-9.4c3.4,0,7.7,0.8,9.6,1.8l-1.8,5.4c-2.7-0.8-5-1.4-7.7-1.4c-2.4,0-4.7,0.4-4.7,3c0,4.6,12.5,6.9,12.5,15.2
+  c0,8.1-7.8,9.5-13.1,9.5C568.6,228.6,564.8,228.2,561.7,226.7" />
+              <path class="st0" d="M589.2,218.5c0-12.1,8-23.1,20.5-23.1c2,0,5,0.2,7.1,0.6l-3.3,32h-7.3l0.5-4.9c-3.6,3.4-6.8,5.6-9.9,5.6
+  C591.2,228.7,589.2,224.6,589.2,218.5 M607.3,217.2l1.7-15.6c-0.2-0.1-0.6-0.1-1.1-0.1c-6.7,0-11.4,8.1-11.4,16.4
+  c0,2.4,0.6,4.5,2.3,4.5C601.1,222.3,605.5,218.7,607.3,217.2" />
+              <path class="st0" d="M622,227.1l4.5-43.6h7.1l-1.5,15.3c2.1-1.6,5.8-3.5,9.1-3.5c5.6,0,8.2,3.2,8.2,10c0,10.2-4.8,23.3-17.7,23.3
+  C628.2,228.6,624.6,227.8,622,227.1 M642.3,205.4c0-3.1-1.2-4.1-2.9-4.1c-2.4,0-5.6,1.7-7.8,3l-1.9,18.2c0.9,0.2,1.5,0.3,2.6,0.3
+  C639.8,222.8,642.3,211.6,642.3,205.4" />
+              <polygon class="st0" points="658.5,183.4 665.8,183.4 661.1,228 653.9,228 " />
+              <path class="st0" d="M669.8,216.4c0-10.9,5.4-21.5,16.8-21.5c6.8,0,9.7,4,9.7,8.2c0,5.5-5,8-10,9.7l-9.1,3.1
+  c-0.1,0.4-0.1,0.8-0.1,1.1c0,3.8,0.9,5.7,3.2,5.7c2.5,0,5.9-1.4,9.8-3.4l2.5,5c-4.1,2.6-8.2,4.5-14,4.5
+  C671.3,228.7,669.8,222.3,669.8,216.4 M685.9,207.1c2.2-0.9,3.4-2.2,3.4-3.7c0-1.8-1.4-2.7-2.9-2.7c-4.7,0-7.5,4.1-8.6,9.5
+  L685.9,207.1z" />
+              <path class="st0"
+                d="M727.8,201.4c0,4.1-3.2,7.3-7.4,7.3c-4.1,0-7.4-3.2-7.4-7.3c0-4,3.3-7.2,7.4-7.2
+  C724.6,194.2,727.8,197.4,727.8,201.4 M714.8,201.4c0,3.2,2.4,5.8,5.6,5.8c3.2,0,5.5-2.5,5.5-5.7c0-3.2-2.3-5.8-5.5-5.8
+  S714.8,198.2,714.8,201.4 M719.2,205.1h-1.7v-7.2c0.7-0.1,1.6-0.2,2.8-0.2c1.4,0,2,0.2,2.5,0.5c0.4,0.3,0.7,0.9,0.7,1.6
+  c0,0.8-0.6,1.4-1.5,1.7v0.1c0.7,0.3,1.1,0.8,1.3,1.8c0.2,1.1,0.4,1.5,0.5,1.8h-1.8c-0.2-0.3-0.4-0.9-0.6-1.8
+  c-0.1-0.8-0.6-1.1-1.5-1.1h-0.8V205.1z M719.3,201.1h0.8c0.9,0,1.7-0.3,1.7-1.1c0-0.7-0.5-1.1-1.5-1.1c-0.4,0-0.7,0-0.9,0.1V201.1z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  </div>
+
+</body>
+
+</html>
